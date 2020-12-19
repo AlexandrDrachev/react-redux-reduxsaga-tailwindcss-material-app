@@ -19,3 +19,17 @@ export const getAuthSaga = (user) => {
         payload: user
     };
 };
+
+export const getRegisterAction = (newUser) => {
+    return {
+        type: "GET_REGISTER_ACTION",
+        payload: newUser
+    };
+};
+
+export const getRegisterSaga = (newUser) => {
+    return {
+        type: "GET_REGISTER_SAGA",
+        payload: newUser
+    };
+};

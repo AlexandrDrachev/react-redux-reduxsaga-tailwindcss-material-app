@@ -211,15 +211,19 @@ const Home = ({ classes, theme }) => {
                         </Typography>
                     </div>
 
-                    <IconButton
-                        className={`${classes.userMenu} focus:outline-none sm:mr-40`}
-                        aria-owns={openUserMenu ? 'menu-appbar' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                    >
-                        <AccountCircle />
-                    </IconButton>
+                    <div>
+                        <span className={`mr-10 font-bold`}>{user.userName}</span>
+                        <IconButton
+                            className={`${classes.userMenu} focus:outline-none sm:mr-40`}
+                            aria-owns={openUserMenu ? 'menu-appbar' : undefined}
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                        >
+                            <AccountCircle />
+                        </IconButton>
+                    </div>
+
                     <Menu
                         id="menu-appbar"
                         anchorEl={anchorEl}
@@ -236,7 +240,7 @@ const Home = ({ classes, theme }) => {
                     >
                         <MenuItem onClick={handleClose}>
                             <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            Settings
+                            <div className={`text-blue-600`}>Settings</div>
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
                             <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />

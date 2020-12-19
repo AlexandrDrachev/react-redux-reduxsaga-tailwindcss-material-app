@@ -1,5 +1,5 @@
 import { take, call, put } from "redux-saga/effects";
-import { getErrorAuthSaga } from "./errorIndicatorActions";
+import {getErrorAuthSaga, getErrorRegisterSaga} from "./errorIndicatorActions";
 
 export function* getErrorAuthWatcher() {
     while (true) {
@@ -14,4 +14,16 @@ export function* getErrorAuthWorker() {
         titleError: "Authorisation error!",
         messageError: "Try again",
     }));
+}
+
+export function* getErrorRegisterWatcher() {
+    while (true) {
+        const { payload } = yield take("GET_ERROR_REGISTER_ACTION");
+        yield call(getErrorRegisterWorker, payload);
+    }
+}
+
+function* getErrorRegisterWorker(error) {
+    debugger
+    yield put(getErrorRegisterSaga(error));
 }

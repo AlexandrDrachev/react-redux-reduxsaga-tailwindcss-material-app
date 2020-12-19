@@ -17,7 +17,13 @@ export const authReducer = (state, action) => {
             return {
                 ...state,
                 user: action.payload,
-                userRole: action.payload.role || null
+                userRole: action.payload.role
+            };
+        case "GET_REGISTER_SAGA":
+            return {
+                ...state,
+                user: action.payload,
+                userRole: action.payload.role
             };
         default:
             return state;

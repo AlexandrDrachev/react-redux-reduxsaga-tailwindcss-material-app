@@ -59,23 +59,3 @@ const ErrorIndicator = () => {
 }
 
 export default ErrorIndicator;
-
-// import React from "react";
-//
-// import { useSelector } from "react-redux";
-//
-// const ErrorIndicator = () => {
-//
-//     const errorState = useSelector(({ errorIndicatorState }) => errorIndicatorState);
-//     console.log('errorState: ', errorState);
-//
-//     return (
-//         <div>
-//             <div>
-//                 {errorState.messageError}
-//             </div>
-//         </div>
-//     );
-// };
-//
-// export default ErrorIndicator;

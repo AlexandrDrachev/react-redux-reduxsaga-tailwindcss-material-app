@@ -8,14 +8,20 @@ export const initialErrorIndicatorState = {
 
 export const errorIndicatorReducer = (state, action) => {
     switch (action.type) {
-        case "GET_ERROR_AUTH_SAGA":
-            return action.payload;
+
         case "CLOSE_ERROR_INDICATOR_ACTION":
             return {
                 error: false,
                 messageError: null,
                 titleError: null
             }
+
+        case "GET_ERROR_AUTH_SAGA":
+            return action.payload;
+
+        case "GET_ERROR_REGISTER_SAGA":
+            return action.payload;
+
         default:
             return state;
     }

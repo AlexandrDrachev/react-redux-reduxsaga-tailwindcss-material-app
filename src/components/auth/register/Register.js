@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,6 +14,7 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import {getRegisterAction} from "../redux/authActions";
 
 const styles = () => ({
     card: {
@@ -44,8 +46,41 @@ const styles = () => ({
 
 const Register = (props) => {
 
+    const user = useSelector(({ authState }) => authState.user);
     const [ showPass, setShowPass ] = useState(false);
+    const [ showPassConfirm, setShowPassConfirm ] = useState(false);
     const { classes } = props;
+    const dispatch = useDispatch();
+    const [ newUser, setNewUser ] = useState({
+        login: "",
+        email: "",
+        password: "",
+        passwordConfirm: ""
+    });
+
+    const validateForm = () => {
+        const { login, email, password, passwordConfirm } = newUser;
+        if (
+            login.length >= 3 &&
+            email.length >= 5 &&
+            email.includes("@") &&
+            password.length >= 3 &&
+            passwordConfirm.length >= 3 &&
+            password === passwordConfirm
+        ) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    const getRegister = () => {
+        dispatch(getRegisterAction(newUser))
+    };
+
+    if (user) {
+        return <Redirect to="/" />
+    }
 
     return (
         <div className={`relative w-full h-screen overflow-hidden`}>
@@ -59,6 +94,13 @@ const Register = (props) => {
                     <form className={`w-full flex flex-col justify-center items-center`}>
 
                         <TextField
+                            required
+                            onChange={(e) => {
+                                setNewUser({
+                                    ...newUser,
+                                    login: e.target.value
+                                });
+                            }}
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-login"
                             variant="outlined"
@@ -66,6 +108,13 @@ const Register = (props) => {
                         />
 
                         <TextField
+                            required
+                            onChange={(e) => {
+                                setNewUser({
+                                    ...newUser,
+                                    email: e.target.value
+                                });
+                            }}
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-email"
                             variant="outlined"
@@ -73,6 +122,13 @@ const Register = (props) => {
                         />
 
                         <TextField
+                            required
+                            onChange={(e) => {
+                                setNewUser({
+                                    ...newUser,
+                                    password: e.target.value
+                                });
+                            }}
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-password"
                             variant="outlined"
@@ -94,20 +150,30 @@ const Register = (props) => {
                         />
 
                         <TextField
-                            className={`${classes.input} sm:w-full`}
+                            required
+                            onChange={(e) => {
+                                setNewUser({
+                                    ...newUser,
+                                    passwordConfirm: e.target.value
+                                });
+                            }}
+                            className={`
+                            ${classes.input} sm:w-full text-blue-600
+                            `}
                             id="outlined-adornment-password-confirm"
-                            variant="outlined"
-                            type={showPass ? 'text' : 'password'}
+                            variant={`outlined`}
+                            error={newUser.password !== newUser.passwordConfirm}
+                            type={showPassConfirm ? 'text' : 'password'}
                             label="Password(Confirm)"
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
                                         <IconButton
                                             className={`focus:outline-none`}
-                                            onClick={() => setShowPass(!showPass)}
+                                            onClick={() => setShowPassConfirm(!showPassConfirm)}
                                             aria-label="Toggle password visibility"
                                         >
-                                            {showPass ? <VisibilityOff /> : <Visibility />}
+                                            {showPassConfirm ? <VisibilityOff /> : <Visibility />}
                                         </IconButton>
                                     </InputAdornment>
                                 ),
@@ -115,6 +181,8 @@ const Register = (props) => {
                         />
                         <CardActions>
                             <Button
+                                onClick={() => getRegister()}
+                                disabled={validateForm()}
                                 className={`focus:outline-none ${classes.button}`}
                                 size={`large`}
                                 color={`primary`}
