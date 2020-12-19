@@ -211,38 +211,48 @@ const Home = ({ classes, theme }) => {
                         </Typography>
                     </div>
 
-                    <IconButton
-                        className={`${classes.userMenu} focus:outline-none sm:mr-40`}
-                        aria-owns={openUserMenu ? 'menu-appbar' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                    >
-                        <AccountCircle />
-                    </IconButton>
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorEl}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={openUserMenu}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>
-                            <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            Settings
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                            <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            Logout
-                        </MenuItem>
-                    </Menu>
+                    <div className={`flex justify-center items-center`}>
+                        <div className={`flex flex-col justify-center items-end mr-10`}>
+                            <span className={`leading-none font-bold`}>
+                                {user.userName}
+                            </span>
+                            <span className={`leading-none text-xs`}>
+                                {user.role}
+                            </span>
+                        </div>
+                        <IconButton
+                            className={`${classes.userMenu} focus:outline-none sm:mr-40`}
+                            aria-owns={openUserMenu ? 'menu-appbar' : undefined}
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                        >
+                            <AccountCircle />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorEl}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={openUserMenu}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                Settings
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                Logout
+                            </MenuItem>
+                        </Menu>
+                    </div>
                 </Toolbar>
             </AppBar>
         </div>
