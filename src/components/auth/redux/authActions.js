@@ -33,3 +33,9 @@ export const getRegisterSaga = (newUser) => {
         payload: newUser
     };
 };
+
+export const logoutAction = () => {
+    return {
+        type: "LOGOUT_ACTION"
+    };
+};

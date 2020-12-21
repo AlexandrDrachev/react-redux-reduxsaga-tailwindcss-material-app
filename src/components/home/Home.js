@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Redirect, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Spinner from "../spinner";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -34,6 +34,7 @@ import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import routes from "../configs/routes";
 import ErrorIndicator from "../error-indicator";
+import {logoutAction} from "../auth/redux/authActions";
 
 const drawerWidth = 240;
 
@@ -106,6 +107,7 @@ const Home = ({ classes, theme }) => {
     const authError = useSelector(({ errorIndicatorState }) => errorIndicatorState.error);
 
     const user = useSelector(({ authState }) => authState.user);
+    const dispatch = useDispatch();
 
     const naviItems = [
         {
@@ -242,7 +244,7 @@ const Home = ({ classes, theme }) => {
                             <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
                             <div className={`text-blue-600`}>Settings</div>
                         </MenuItem>
-                        <MenuItem onClick={handleClose}>
+                        <MenuItem onClick={() => dispatch(logoutAction())}>
                             <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
                             Logout
                         </MenuItem>

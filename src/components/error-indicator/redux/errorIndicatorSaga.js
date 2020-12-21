@@ -24,6 +24,5 @@ export function* getErrorRegisterWatcher() {
 }
 
 function* getErrorRegisterWorker(error) {
-    debugger
     yield put(getErrorRegisterSaga(error));
 }
