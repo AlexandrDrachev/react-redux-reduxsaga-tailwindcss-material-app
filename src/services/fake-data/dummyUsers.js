@@ -8,7 +8,8 @@ export const dummyUsers = [
         userEmail: "john_doe@blablabla.com",
         password: "111",
         token: "eexxaammppllee%ttookkeenn#1",
-        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#1"
+        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#1",
+        avatar: "https://randomuser.me/api/portraits/men/96.jpg"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const dummyUsers = [
         userEmail: "dohn_joe@blablabla.com",
         password: "111",
         token: "eexxaammppllee%ttookkeenn#2",
-        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#2"
+        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#2",
+        avatar: "https://randomuser.me/api/portraits/men/69.jpg"
     },
     {
         id: 3,
@@ -26,7 +28,8 @@ export const dummyUsers = [
         userEmail: "ohna_dao@blablabla.com",
         password: "111",
         token: "eexxaammppllee%ttookkeenn#3",
-        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#3"
+        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#3",
+        avatar: "https://randomuser.me/api/portraits/women/70.jpg"
     },
     {
         id: 4,
@@ -35,6 +38,7 @@ export const dummyUsers = [
         userEmail: "alexfront@blablabla.com",
         password: "111",
         token: "eexxaammppllee%ttookkeenn#4",
-        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#4"
+        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#4",
+        avatar: "https://randomuser.me/api/portraits/men/46.jpg"
     }
 ];

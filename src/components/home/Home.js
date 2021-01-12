@@ -16,6 +16,7 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
+import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -155,7 +156,7 @@ const Home = ({ classes, theme }) => {
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
+            {/*<CssBaseline />*/}
             <Drawer
                 variant="permanent"
                 className={classNames(classes.drawer, {
@@ -188,17 +189,10 @@ const Home = ({ classes, theme }) => {
                         </Link>
                     ))}
                 </List>
-                {/*<Divider />*/}
-                {/*<List>*/}
-                {/*    {['All mail', 'Trash', 'Spam'].map((text, index) => (*/}
-                {/*        <ListItem button key={text}>*/}
-                {/*            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>*/}
-                {/*            <ListItemText primary={text} />*/}
-                {/*        </ListItem>*/}
-                {/*    ))}*/}
-                {/*</List>*/}
             </Drawer>
-            <AppBar position="static">
+            <AppBar
+                position="static"
+            >
                 <Toolbar className={classes.navBar}>
                     <div className={`flex justify-center items-center`}>
                         <IconButton
@@ -214,7 +208,7 @@ const Home = ({ classes, theme }) => {
                     </div>
 
                     <div>
-                        <span className={`mr-10 font-bold`}>{user.userName}</span>
+                        <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>
                         <IconButton
                             className={`${classes.userMenu} focus:outline-none sm:mr-40`}
                             aria-owns={openUserMenu ? 'menu-appbar' : undefined}
@@ -222,7 +216,11 @@ const Home = ({ classes, theme }) => {
                             onClick={handleMenu}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            {user.avatar ?
+                                <div className={`w-30 h-30`}>
+                                    <img className={`w-full rounded-full`} src={user.avatar} alt="" />
+                                </div> :
+                                <AccountCircle />}
                         </IconButton>
                     </div>
 
@@ -242,12 +240,19 @@ const Home = ({ classes, theme }) => {
                     >
                         <MenuItem onClick={handleClose}>
                             <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            <div className={`text-blue-600`}>Settings</div>
+                            <div className={``}>Settings</div>
                         </MenuItem>
                         <MenuItem onClick={() => dispatch(logoutAction())}>
                             <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
                             Logout
                         </MenuItem>
+                        {user.role === "admin" &&
+                        <Link to="/admin">
+                            <MenuItem>
+                                <AssignmentIndOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                Admin panel
+                            </MenuItem>
+                        </Link>}
                     </Menu>
                 </Toolbar>
             </AppBar>

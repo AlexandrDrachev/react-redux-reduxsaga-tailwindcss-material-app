@@ -1,8 +1,8 @@
 import { all } from "redux-saga/effects";
 
 import { getAuthWatcher, getRegisterWatcher } from "../components/auth/redux/authSaga";
-
 import { getErrorAuthWatcher, getErrorRegisterWatcher } from "../components/error-indicator/redux/errorIndicatorSaga";
+import { adminGetUsersWatcher, adminTestActionChannelWatcher } from "../components/admin/redux/adminSaga";
 
 export function* rootSaga() {
     yield all([
@@ -10,7 +10,9 @@ export function* rootSaga() {
         getAuthWatcher(),
         getErrorAuthWatcher(),
         getRegisterWatcher(),
-        getErrorRegisterWatcher()
+        getErrorRegisterWatcher(),
+        adminGetUsersWatcher(),
+        adminTestActionChannelWatcher()
     ]);
 }
 

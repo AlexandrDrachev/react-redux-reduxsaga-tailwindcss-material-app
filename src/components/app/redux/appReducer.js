@@ -2,7 +2,7 @@
 
 export const initialAppState = {
     realData: false,
-    user: "user",
+    userRole: "user",
     loading: true,
     error: false,
     messageError: null
@@ -10,5 +10,14 @@ export const initialAppState = {
 
 export const appReducer = (state, action) => {
 
-    return state;
+    switch (action.type) {
+
+        case "GET_USER_ROLE_ACTION":
+            return {
+                ...state,
+                userRole: action.payload
+            };
+        default:
+            return state;
+    }
 };

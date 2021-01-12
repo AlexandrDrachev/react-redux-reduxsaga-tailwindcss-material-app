@@ -4,17 +4,16 @@
     <list default="true" id="5c7d5adf-1a82-4feb-89d0-b9af0273fd03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/redux/appActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/redux/appActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/redux/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/redux/appReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorSaga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/serviceApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/serviceApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-weather-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +64,9 @@
       <workItem from="1608187732742" duration="22704000" />
       <workItem from="1608275317448" duration="21918000" />
       <workItem from="1608367089531" duration="6216000" />
-      <workItem from="1608534382473" duration="3592000" />
+      <workItem from="1608534382473" duration="3669000" />
+      <workItem from="1609312515075" duration="81000" />
+      <workItem from="1610435166962" duration="20856000" />
     </task>
     <servers />
   </component>

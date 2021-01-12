@@ -2,6 +2,7 @@ import { take, call, put, select } from "redux-saga/effects";
 import {getAuthSaga, getRegisterSaga, loadingAuthPageAction} from "./authActions";
 import ServiceApi from "../../../services/serviceApi";
 import {getErrorAuthAction, getErrorRegisterAction} from "../../error-indicator/redux/errorIndicatorActions";
+import {getUserRoleAction} from "../../app/redux/appActions";
 
 const serviceApi = new ServiceApi();
 const { getLogin, createNewUser } = serviceApi;
@@ -22,6 +23,7 @@ function* getAuthWorker(user) {
     if (userAuth) {
         yield put(getAuthSaga(userAuth));
         yield put(loadingAuthPageAction(false));
+        yield put(getUserRoleAction(userAuth.role));
     } else {
         yield put(loadingAuthPageAction(false));
         yield put(getErrorAuthAction());

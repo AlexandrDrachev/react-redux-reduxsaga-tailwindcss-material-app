@@ -1,18 +1,19 @@
 import React from "react";
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import { useSelector } from "react-redux";
 import ErrorIndicator from "../error-indicator";
 import Spinner from "../spinner";
 
 import routes from "../configs/routes";
+import Login from "../auth/login/Login";
 
 const App = () => {
 
     const errorState = useSelector(({ errorIndicatorState }) => errorIndicatorState.error);
     const loading = useSelector(({ appState }) => appState.loading);
-    const user = useSelector(({ appState }) => appState.user);
+    const user = useSelector(({ appState }) => appState.userRole);
 
     return (
         <div className={`w-full h-screen relative overflow-hidden`}>
