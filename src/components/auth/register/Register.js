@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Link, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -14,7 +14,12 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import {getRegisterAction} from "../redux/authActions";
+import { getRegisterAction } from "../redux/authActions";
+import { onToggleLanguageAction } from "../../app/redux/appActions";
+import { eng } from "./translate/eng";
+import { rus } from "./translate/rus";
+import { ukr } from "./translate/ukr";
+import { translator } from "../../../translator/translator";
 
 const styles = () => ({
     card: {
@@ -57,6 +62,8 @@ const Register = (props) => {
         password: "",
         passwordConfirm: ""
     });
+    const language = useSelector(({ appState }) => appState.language);
+    const [ l, setL ] = useState({});
 
     const validateForm = () => {
         const { login, email, password, passwordConfirm } = newUser;
@@ -78,6 +85,33 @@ const Register = (props) => {
         dispatch(getRegisterAction(newUser))
     };
 
+    const renderLanguageIcons = () => {
+        return translator.map((t, idx) => {
+            return (
+                <IconButton
+                    className={`focus:outline-none mr-10`}
+                    onClick={() => dispatch(onToggleLanguageAction(t.desc))}
+                    key={idx}>
+                    <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
+                        <img className={`w-full`} alt="" src={t.flag} />
+                    </div>
+                </IconButton>
+            );
+        });
+    };
+
+    useEffect(() => {
+        if (language === "eng") {
+            setL(eng);
+        }
+        if (language === "rus") {
+            setL(rus);
+        }
+        if (language === "ukr") {
+            setL(ukr);
+        }
+    }, [language]);
+
     if (user) {
         return <Redirect to="/" />
     }
@@ -88,8 +122,11 @@ const Register = (props) => {
                 <Card
                     className={`w-2/3 sm:w-full py-50 flex flex-col justify-center items-center border-2 border-white
                     rounded ${classes.card}`}>
+                    <div className={`w-full flex justify-center items-center`}>
+                        {renderLanguageIcons()}
+                    </div>
                     <Typography className={classes.headTitle}>
-                        CREATE AN ACCOUNT
+                        {l.createAnAccount}
                     </Typography>
                     <form className={`w-full flex flex-col justify-center items-center`}>
 
@@ -104,7 +141,7 @@ const Register = (props) => {
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-login"
                             variant="outlined"
-                            label="Login"
+                            label={l.loginPlaceholder}
                         />
 
                         <TextField
@@ -118,7 +155,7 @@ const Register = (props) => {
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-email"
                             variant="outlined"
-                            label="Email"
+                            label={l.emailPlaceholder}
                         />
 
                         <TextField
@@ -133,7 +170,7 @@ const Register = (props) => {
                             id="outlined-adornment-password"
                             variant="outlined"
                             type={showPass ? 'text' : 'password'}
-                            label="Password"
+                            label={l.passwordPlaceholder}
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
@@ -164,7 +201,7 @@ const Register = (props) => {
                             variant={`outlined`}
                             error={newUser.password !== newUser.passwordConfirm}
                             type={showPassConfirm ? 'text' : 'password'}
-                            label="Password(Confirm)"
+                            label={l.passwordConfirmPlaceholder}
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
@@ -187,19 +224,21 @@ const Register = (props) => {
                                 size={`large`}
                                 color={`primary`}
                                 variant={`contained`}>
-                                Register
+                                {l.registerButton}
                             </Button>
                         </CardActions>
                     </form>
                     <div className={`w-full flex flex-col justify-center items-center`}>
                         <Typography className={classes.span1}>
-                            Already have an account?
+                            {l.alreadyHaveAnAccount}
                         </Typography>
                         <Typography
                             className={classes.span2}
                             variant="body2"
                             gutterBottom>
-                            <Link to="/auth/login">Login</Link>
+                            <Link to="/auth/login">
+                                {l.loginLink}
+                            </Link>
                         </Typography>
                     </div>
                 </Card>

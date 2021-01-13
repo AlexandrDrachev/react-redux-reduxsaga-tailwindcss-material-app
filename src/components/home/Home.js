@@ -22,7 +22,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -33,9 +32,14 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import routes from "../configs/routes";
+import routes from "../../configs/routes";
 import ErrorIndicator from "../error-indicator";
-import {logoutAction} from "../auth/redux/authActions";
+import { logoutAction } from "../auth/redux/authActions";
+import { onToggleLanguageAction } from "../app/redux/appActions";
+import { eng } from "./translate/eng";
+import { rus } from "./translate/rus";
+import { ukr } from "./translate/ukr";
+import { translator } from "../../translator/translator";
 
 const drawerWidth = 240;
 
@@ -109,20 +113,22 @@ const Home = ({ classes, theme }) => {
 
     const user = useSelector(({ authState }) => authState.user);
     const dispatch = useDispatch();
+    const language = useSelector(({ appState }) => appState.language);
+    const [ l, setL ] = useState({});
 
     const naviItems = [
         {
-            desc: "Home",
+            desc: l.homeNaviItemsDesc,
             icon: <HomeOutlinedIcon />,
             path: "/"
         },
         {
-            desc: "Profile",
+            desc: l.profileNaviItemsDesc,
             icon: <PersonIcon />,
             path: "/profile"
         },
         {
-            desc: "Works",
+            desc: l.worksNaviItemsDesc,
             icon: <WorkOutlineIcon />,
             path: "/works"
         }
@@ -146,6 +152,33 @@ const Home = ({ classes, theme }) => {
         setOpenDrawer(false);
     };
 
+    const renderLanguageIcons = () => {
+        return translator.map((t, idx) => {
+            return (
+                <IconButton
+                    className={`focus:outline-none mr-10`}
+                    onClick={() => dispatch(onToggleLanguageAction(t.desc))}
+                    key={idx}>
+                    <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
+                        <img className={`w-full`} alt="" src={t.flag} />
+                    </div>
+                </IconButton>
+            );
+        });
+    };
+
+    useEffect(() => {
+        if (language === "eng") {
+            setL(eng);
+        }
+        if (language === "rus") {
+            setL(rus);
+        }
+        if (language === "ukr") {
+            setL(ukr);
+        }
+    }, [language]);
+
     if (!user) {
         return <Redirect to="/auth/login" />
     }
@@ -156,7 +189,6 @@ const Home = ({ classes, theme }) => {
 
     return (
         <div className={classes.root}>
-            {/*<CssBaseline />*/}
             <Drawer
                 variant="permanent"
                 className={classNames(classes.drawer, {
@@ -203,25 +235,30 @@ const Home = ({ classes, theme }) => {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" color="inherit" className={classes.grow}>
-                            Home
+                            {l.home}
                         </Typography>
                     </div>
 
-                    <div>
-                        <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>
-                        <IconButton
-                            className={`${classes.userMenu} focus:outline-none sm:mr-40`}
-                            aria-owns={openUserMenu ? 'menu-appbar' : undefined}
-                            aria-haspopup="true"
-                            onClick={handleMenu}
-                            color="inherit"
-                        >
-                            {user.avatar ?
-                                <div className={`w-30 h-30`}>
-                                    <img className={`w-full rounded-full`} src={user.avatar} alt="" />
-                                </div> :
-                                <AccountCircle />}
-                        </IconButton>
+                    <div className={`flex flex-col justify-center items-center`}>
+                        <div className={`flex pr-50`}>
+                            {renderLanguageIcons()}
+                        </div>
+                        <div>
+                            <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>
+                            <IconButton
+                                className={`${classes.userMenu} focus:outline-none sm:mr-40`}
+                                aria-owns={openUserMenu ? 'menu-appbar' : undefined}
+                                aria-haspopup="true"
+                                onClick={handleMenu}
+                                color="inherit"
+                            >
+                                {user.avatar ?
+                                    <div className={`w-30 h-30`}>
+                                        <img className={`w-full rounded-full`} src={user.avatar} alt="" />
+                                    </div> :
+                                    <AccountCircle />}
+                            </IconButton>
+                        </div>
                     </div>
 
                     <Menu
@@ -240,17 +277,19 @@ const Home = ({ classes, theme }) => {
                     >
                         <MenuItem onClick={handleClose}>
                             <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            <div className={``}>Settings</div>
+                            <div className={``}>
+                                {l.settingsMenuItem}
+                            </div>
                         </MenuItem>
                         <MenuItem onClick={() => dispatch(logoutAction())}>
                             <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            Logout
+                            {l.logoutMenuItem}
                         </MenuItem>
                         {user.role === "admin" &&
                         <Link to="/admin">
                             <MenuItem>
                                 <AssignmentIndOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                                Admin panel
+                                {l.adminPanelMenuItem}
                             </MenuItem>
                         </Link>}
                     </Menu>

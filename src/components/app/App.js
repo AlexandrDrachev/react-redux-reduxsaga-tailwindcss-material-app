@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import ErrorIndicator from "../error-indicator";
 import Spinner from "../spinner";
 
-import routes from "../configs/routes";
+import routes from "../../configs/routes";
 import Login from "../auth/login/Login";
 
 const App = () => {

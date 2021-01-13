@@ -5,7 +5,8 @@ export const initialAppState = {
     userRole: "user",
     loading: true,
     error: false,
-    messageError: null
+    messageError: null,
+    language: "eng"
 };
 
 export const appReducer = (state, action) => {
@@ -16,6 +17,11 @@ export const appReducer = (state, action) => {
             return {
                 ...state,
                 userRole: action.payload
+            };
+        case "ON_TOGGLE_LANGUAGE_ACTION":
+            return {
+                ...state,
+                language: action.payload
             };
         default:
             return state;

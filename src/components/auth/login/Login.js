@@ -15,7 +15,12 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { getAuthAction } from "../redux/authActions";
+import { onToggleLanguageAction } from "../../app/redux/appActions";
 import ErrorIndicator from "../../error-indicator";
+import { eng } from "./translate/eng";
+import { rus } from "./translate/rus";
+import { ukr } from "./translate/ukr";
+import { translator } from "../../../translator/translator";
 
 const styles = () => ({
     card: {
@@ -59,12 +64,41 @@ const Login = (props) => {
     const onSubmit = () => {
         dispatch(getAuthAction(user));
     };
+    const language = useSelector(({ appState }) => appState.language);
+    const [ l, setL ] = useState({});
+
+    useEffect(() => {
+        if (language === "eng") {
+            setL(eng);
+        }
+        if (language === "rus") {
+            setL(rus);
+        }
+        if (language === "ukr") {
+            setL(ukr);
+        }
+    }, [language]);
 
     useEffect(() => {
         console.log("login: ", user.login);
         console.log("pass: ", user.password);
         console.log("authError: ", authError);
     }, [user]);
+
+    const renderLanguageIcons = () => {
+        return translator.map((t, idx) => {
+            return (
+                <IconButton
+                    className={`focus:outline-none mr-10`}
+                    onClick={() => dispatch(onToggleLanguageAction(t.desc))}
+                    key={idx}>
+                    <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
+                        <img className={`w-full`} alt="" src={t.flag} />
+                    </div>
+                </IconButton>
+            );
+        });
+    };
 
     if (userAuth) {
         return <Redirect to="/" />
@@ -80,8 +114,11 @@ const Login = (props) => {
                 <Card
                     className={`w-2/3 sm:w-full py-50 flex flex-col justify-center items-center border-2 border-white
                     rounded ${classes.card}`}>
+                    <div className={`w-full flex justify-center items-center`}>
+                        {renderLanguageIcons()}
+                    </div>
                     <Typography className={classes.headTitle}>
-                        LOGIN TO YOUR ACCOUNT
+                        {l.loginToYourAccount}
                     </Typography>
                     <form className={`w-full flex flex-col justify-center items-center`}>
                         <TextField
@@ -93,7 +130,7 @@ const Login = (props) => {
                             className={`${classes.input} sm:w-full`}
                             id="outlined-adornment-login"
                             variant="outlined"
-                            label="Login"
+                            label={l.loginPlaceholder}
                         />
 
                         <TextField
@@ -106,7 +143,7 @@ const Login = (props) => {
                             id="outlined-adornment-password"
                             variant="outlined"
                             type={showPass ? 'text' : 'password'}
-                            label="Password"
+                            label={l.passwordPlaceholder}
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
@@ -129,19 +166,21 @@ const Login = (props) => {
                                 size={`large`}
                                 color={`primary`}
                                 variant={`contained`}>
-                                Login
+                                {l.loginButton}
                             </Button>
                         </CardActions>
                     </form>
                     <div className={`w-full flex flex-col justify-center items-center`}>
                         <Typography className={classes.span1}>
-                            Don't have an account?
+                            {l.dontHaveAnAccount}
                         </Typography>
                         <Typography
                             className={classes.span2}
                             variant="body2"
                             gutterBottom>
-                            <Link to="/auth/register">Registration</Link>
+                            <Link to="/auth/register">
+                                {l.registrationLink}
+                            </Link>
                         </Typography>
                     </div>
                 </Card>
