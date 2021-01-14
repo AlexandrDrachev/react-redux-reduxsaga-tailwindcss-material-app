@@ -1,81 +1,81 @@
 export const eng = {
-    A: "=====>",
+    // A: "=====>",
     alreadyHaveAnAccount: "Already have an account?",
 
-    B: "=====>",
-    bFirstLetter: "B first letter",
+    // B: "=====>",
+    // bFirstLetter: "B first letter",
 
-    C: "=====>",
+    // C: "=====>",
     createAnAccount: "CREATE AN ACCOUNT",
 
-    D: "=====>",
-    dFirstLetter: "D first letter",
+    // D: "=====>",
+    // dFirstLetter: "D first letter",
 
-    E: "=====>",
+    // E: "=====>",
     emailPlaceholder: "E-mail",
 
-    F: "=====>",
-    fFirstLetter: "F first letter",
+    // F: "=====>",
+    // fFirstLetter: "F first letter",
 
-    G: "=====>",
-    gFirstLetter: "G first letter",
+    // G: "=====>",
+    // gFirstLetter: "G first letter",
 
-    H: "=====>",
-    hFirstLetter: "H first letter",
+    // H: "=====>",
+    // hFirstLetter: "H first letter",
 
-    I: "=====>",
-    iFirstLetter: "I first letter",
+    // I: "=====>",
+    // iFirstLetter: "I first letter",
 
-    J: "=====>",
-    jFirstLetter: "J first letter",
+    // J: "=====>",
+    // jFirstLetter: "J first letter",
 
-    K: "=====>",
-    kFirstLetter: "K first letter",
+    // K: "=====>",
+    // kFirstLetter: "K first letter",
 
-    L: "=====>",
+    // L: "=====>",
     loginPlaceholder: "Login",
     loginLink: "Login",
 
-    M: "=====>",
-    mFirstLetter: "M first letter",
+    // M: "=====>",
+    // mFirstLetter: "M first letter",
 
-    N: "=====>",
-    nFirstLetter: "N first letter",
+    // N: "=====>",
+    // nFirstLetter: "N first letter",
 
-    O: "=====>",
-    oFirstLetter: "O first letter",
+    // O: "=====>",
+    // oFirstLetter: "O first letter",
 
-    P: "=====>",
+    // P: "=====>",
     passwordPlaceholder: "Password",
     passwordConfirmPlaceholder: "Password(Confirm)",
 
-    Q: "=====>",
-    qFirstLetter: "Q first letter",
+    // Q: "=====>",
+    // qFirstLetter: "Q first letter",
 
-    R: "=====>",
+    // R: "=====>",
     registerButton: "REGISTER",
 
-    S: "=====>",
-    sFirstLetter: "S first letter",
+    // S: "=====>",
+    // sFirstLetter: "S first letter",
 
-    T: "=====>",
-    tFirstLetter: "T first letter",
+    // T: "=====>",
+    // tFirstLetter: "T first letter",
 
-    U: "=====>",
-    uFirstLetter: "U first letter",
+    // U: "=====>",
+    // uFirstLetter: "U first letter",
 
-    V: "=====>",
-    vFirstLetter: "V first letter",
+    // V: "=====>",
+    // vFirstLetter: "V first letter",
 
-    W: "=====>",
-    wFirstLetter: "W first letter",
+    // W: "=====>",
+    // wFirstLetter: "W first letter",
 
-    X: "=====>",
-    xFirstLetter: "X first letter",
+    // X: "=====>",
+    // xFirstLetter: "X first letter",
 
-    Y: "=====>",
-    yFirstLetter: "Y first letter",
+    // Y: "=====>",
+    // yFirstLetter: "Y first letter",
 
-    Z: "=====>",
-    zFirstLetter: "Z first letter",
+    // Z: "=====>",
+    // zFirstLetter: "Z first letter",
 };

@@ -9,6 +9,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import Button from "@material-ui/core/Button";
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PersonIcon from '@material-ui/icons/PermIdentity';
@@ -40,12 +41,14 @@ import { eng } from "./translate/eng";
 import { rus } from "./translate/rus";
 import { ukr } from "./translate/ukr";
 import { translator } from "../../translator/translator";
+import {activeAlertIndicatorAction} from "../alert-indicator/redux/alertIndicatorActions";
 
 const drawerWidth = 240;
 
 const styles = (theme) => ({
     root: {
-        // flexGrow: 1,
+        flexGrow: 1,
+        flexShrink: 1,
         display: "flex"
     },
     grow: {
@@ -98,6 +101,7 @@ const styles = (theme) => ({
     },
     navBar: {
         display: "flex",
+        flexShrink: 1,
         width: "100%",
         justifyContent: "space-between",
         alignItems: "center"
@@ -112,6 +116,7 @@ const Home = ({ classes, theme }) => {
     const authError = useSelector(({ errorIndicatorState }) => errorIndicatorState.error);
 
     const user = useSelector(({ authState }) => authState.user);
+    const alertIndicator = useSelector(({ alertIndicatorState }) => alertIndicatorState.alertIndicator);
     const dispatch = useDispatch();
     const language = useSelector(({ appState }) => appState.language);
     const [ l, setL ] = useState({});
@@ -152,6 +157,8 @@ const Home = ({ classes, theme }) => {
         setOpenDrawer(false);
     };
 
+    const testAlertMessage = "Alert Indicator is work! dfhdhhe dfhdffheheht dfdhethet bcvbcvcv fgererhdfdfb";
+
     const renderLanguageIcons = () => {
         return translator.map((t, idx) => {
             return (
@@ -188,113 +195,122 @@ const Home = ({ classes, theme }) => {
     }
 
     return (
-        <div className={classes.root}>
-            <Drawer
-                variant="permanent"
-                className={classNames(classes.drawer, {
-                    [classes.drawerOpen]: openDrawer,
-                    [classes.drawerClose]: !openDrawer,
-                })}
-                classes={{
-                    paper: classNames({
+        <div>
+            <div className={classes.root}>
+                <Drawer
+                    variant="permanent"
+                    className={classNames(classes.drawer, {
                         [classes.drawerOpen]: openDrawer,
                         [classes.drawerClose]: !openDrawer,
-                    }),
-                }}
-                open={openDrawer}
-            >
-                <div className={`${classes.toolbar}`}>
-                    <IconButton
-                        className={`focus:outline-none`}
-                        onClick={handleDrawerClose}>
-                        {theme.direction === 'rtl' ? openDrawer && <ChevronRightIcon /> : openDrawer && <ChevronLeftIcon />}
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    {naviItems.map((nav, index) => (
-                        <Link to={nav.path} key={index}>
-                            <ListItem button>
-                                <ListItemIcon>{nav.icon}</ListItemIcon>
-                                <ListItemText primary={nav.desc} />
-                            </ListItem>
-                        </Link>
-                    ))}
-                </List>
-            </Drawer>
-            <AppBar
-                position="static"
-            >
-                <Toolbar className={classes.navBar}>
-                    <div className={`flex justify-center items-center`}>
+                    })}
+                    classes={{
+                        paper: classNames({
+                            [classes.drawerOpen]: openDrawer,
+                            [classes.drawerClose]: !openDrawer,
+                        }),
+                    }}
+                    open={openDrawer}
+                >
+                    <div className={`${classes.toolbar}`}>
                         <IconButton
-                            onClick={handleDrawerOpen}
                             className={`focus:outline-none`}
-                            color="inherit"
-                            aria-label="Menu">
-                            <MenuIcon />
+                            onClick={handleDrawerClose}>
+                            {theme.direction === 'rtl' ? openDrawer && <ChevronRightIcon /> : openDrawer && <ChevronLeftIcon />}
                         </IconButton>
-                        <Typography variant="h6" color="inherit" className={classes.grow}>
-                            {l.home}
-                        </Typography>
                     </div>
-
-                    <div className={`flex flex-col justify-center items-center`}>
-                        <div className={`flex pr-50`}>
-                            {renderLanguageIcons()}
-                        </div>
-                        <div>
-                            <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>
+                    <Divider />
+                    <List>
+                        {naviItems.map((nav, index) => (
+                            <Link to={nav.path} key={index}>
+                                <ListItem button>
+                                    <ListItemIcon>{nav.icon}</ListItemIcon>
+                                    <ListItemText primary={nav.desc} />
+                                </ListItem>
+                            </Link>
+                        ))}
+                    </List>
+                </Drawer>
+                <AppBar
+                    position="static" className={`w-full flex-shrink`}
+                >
+                    <Toolbar className={classes.navBar}>
+                        <div className={`flex justify-center items-center`}>
                             <IconButton
-                                className={`${classes.userMenu} focus:outline-none sm:mr-40`}
-                                aria-owns={openUserMenu ? 'menu-appbar' : undefined}
-                                aria-haspopup="true"
-                                onClick={handleMenu}
+                                onClick={handleDrawerOpen}
+                                className={`focus:outline-none`}
                                 color="inherit"
-                            >
-                                {user.avatar ?
-                                    <div className={`w-30 h-30`}>
-                                        <img className={`w-full rounded-full`} src={user.avatar} alt="" />
-                                    </div> :
-                                    <AccountCircle />}
+                                aria-label="Menu">
+                                <MenuIcon />
                             </IconButton>
+                            <Typography variant="h6" color="inherit" className={classes.grow}>
+                                {l.home}
+                            </Typography>
                         </div>
-                    </div>
 
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorEl}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={openUserMenu}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>
-                            <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            <div className={``}>
-                                {l.settingsMenuItem}
+                        <div className={`flex flex-col justify-center items-center`}>
+                            <div className={`flex pr-50`}>
+                                {renderLanguageIcons()}
                             </div>
-                        </MenuItem>
-                        <MenuItem onClick={() => dispatch(logoutAction())}>
-                            <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                            {l.logoutMenuItem}
-                        </MenuItem>
-                        {user.role === "admin" &&
-                        <Link to="/admin">
-                            <MenuItem>
-                                <AssignmentIndOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
-                                {l.adminPanelMenuItem}
+                            <div>
+                                <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>
+                                <IconButton
+                                    className={`${classes.userMenu} focus:outline-none sm:mr-40`}
+                                    aria-owns={openUserMenu ? 'menu-appbar' : undefined}
+                                    aria-haspopup="true"
+                                    onClick={handleMenu}
+                                    color="inherit"
+                                >
+                                    {user.avatar ?
+                                        <div className={`w-30 h-30`}>
+                                            <img className={`w-full rounded-full`} src={user.avatar} alt="" />
+                                        </div> :
+                                        <AccountCircle />}
+                                </IconButton>
+                            </div>
+                        </div>
+
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorEl}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={openUserMenu}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <SettingsOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                <div className={``}>
+                                    {l.settingsMenuItem}
+                                </div>
                             </MenuItem>
-                        </Link>}
-                    </Menu>
-                </Toolbar>
-            </AppBar>
+                            <MenuItem onClick={() => dispatch(logoutAction())}>
+                                <ExitToAppOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                {l.logoutMenuItem}
+                            </MenuItem>
+                            {user.role === "admin" &&
+                            <Link to="/admin">
+                                <MenuItem>
+                                    <AssignmentIndOutlinedIcon fontSize="small" color="action" className={`mr-10`} />
+                                    {l.adminPanelMenuItem}
+                                </MenuItem>
+                            </Link>}
+                        </Menu>
+                    </Toolbar>
+                </AppBar>
+            </div>
+            <div className={`${classes.content} w-full flex justify-start m-20`}>
+                <Button
+                    disabled={alertIndicator}
+                    onClick={() => dispatch(activeAlertIndicatorAction(testAlertMessage))}>
+                    test alert indicator
+                </Button>
+            </div>
         </div>
     );
 }
