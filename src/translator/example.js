@@ -1,3 +1,10 @@
+import React from 'react';
+
+import { translator } from "./translator";
+import { onToggleLanguageAction } from "../components/app/redux/appActions";
+
+import IconButton from "@material-ui/core/IconButton";
+
 const eng = {
     // A:
     // aFirstLetter: "A first letter",
@@ -117,3 +124,18 @@ const eng = {
         });
     };
  */
+
+export const renderLanguageIcons = (dispatch) => {
+  return translator.map((t, idx) => {
+    return (
+      <IconButton
+        className={`focus:outline-none mr-10 shadow-lg`}
+        onClick={() => dispatch(onToggleLanguageAction(t.desc))}
+        key={idx}>
+        <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
+          <img className={`w-full`} alt="" src={t.flag} />
+        </div>
+      </IconButton>
+    );
+  });
+};

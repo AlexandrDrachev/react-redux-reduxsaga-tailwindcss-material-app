@@ -6,7 +6,7 @@ export const rus = {
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    // cFirstLetter: "C first letter",
+    collection: 'Коллекция',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",

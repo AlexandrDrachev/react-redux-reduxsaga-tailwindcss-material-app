@@ -18,6 +18,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
+import CollectionsIcon from '@material-ui/icons/Collections';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -42,6 +43,7 @@ import { rus } from "./translate/rus";
 import { ukr } from "./translate/ukr";
 import { translator } from "../../translator/translator";
 import {activeAlertIndicatorAction} from "../alert-indicator/redux/alertIndicatorActions";
+import { renderLanguageIcons } from "../../translator/example";
 
 const drawerWidth = 240;
 
@@ -126,18 +128,23 @@ const Home = ({ classes, theme }) => {
         {
             desc: l.homeNaviItemsDesc,
             icon: <HomeOutlinedIcon />,
-            path: "/"
+            path: '/',
         },
         {
             desc: l.profileNaviItemsDesc,
             icon: <PersonIcon />,
-            path: "/profile"
+            path: '/profile',
         },
         {
             desc: l.worksNaviItemsDesc,
             icon: <WorkOutlineIcon />,
-            path: "/works"
-        }
+            path: '/works',
+        },
+        {
+            desc: l.collection,
+            icon: <CollectionsIcon />,
+            path: '/collection',
+        },
     ];
 
     const handleMenu = (event) => {
@@ -159,21 +166,6 @@ const Home = ({ classes, theme }) => {
     };
 
     const testAlertMessage = "Alert Indicator is work! dfhdhhe dfhdffheheht dfdhethet bcvbcvcv fgererhdfdfb";
-
-    const renderLanguageIcons = () => {
-        return translator.map((t, idx) => {
-            return (
-                <IconButton
-                    className={`focus:outline-none mr-10 shadow-lg`}
-                    onClick={() => dispatch(onToggleLanguageAction(t.desc))}
-                    key={idx}>
-                    <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
-                        <img className={`w-full`} alt="" src={t.flag} />
-                    </div>
-                </IconButton>
-            );
-        });
-    };
 
     useEffect(() => {
         if (language === "eng") {
@@ -221,14 +213,21 @@ const Home = ({ classes, theme }) => {
                     </div>
                     <Divider />
                     <List>
-                        {naviItems.map((nav, index) => (
-                            <Link to={nav.path} key={index}>
-                                <ListItem button>
-                                    <ListItemIcon>{nav.icon}</ListItemIcon>
-                                    <ListItemText primary={nav.desc} />
-                                </ListItem>
-                            </Link>
-                        ))}
+                        {
+                            naviItems.map((nav, index) => {
+                                if (nav.path === '/collection' && user.role !== 'admin') {
+                                    return null;
+                                }
+                                return (
+                                    <Link to={nav.path} key={index}>
+                                        <ListItem button>
+                                          <ListItemIcon>{nav.icon}</ListItemIcon>
+                                          <ListItemText primary={nav.desc} />
+                                        </ListItem>
+                                    </Link>
+                                )}
+                            )
+                        }
                     </List>
                 </Drawer>
                 <AppBar
@@ -250,7 +249,7 @@ const Home = ({ classes, theme }) => {
 
                         <div className={`flex flex-col justify-center items-center`}>
                             <div className={`flex pr-50`}>
-                                {renderLanguageIcons()}
+                                {renderLanguageIcons(dispatch)}
                             </div>
                             <div>
                                 <span className={`mr-10 font-bold sm:hidden`}>{user.userName}</span>

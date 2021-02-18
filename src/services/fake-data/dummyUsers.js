@@ -44,5 +44,16 @@ export const dummyUsers = [
         refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#4",
         avatar: "https://randomuser.me/api/portraits/men/46.jpg",
         locked: false
+    },
+    {
+        id: 5,
+        role: "user",
+        userName: "alex",
+        userEmail: "alex@blablabla.com",
+        password: "111",
+        token: "eexxaammppllee%ttookkeenn#5",
+        refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#5",
+        avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+        locked: false
     }
 ];

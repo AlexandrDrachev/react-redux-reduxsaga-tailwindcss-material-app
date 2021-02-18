@@ -1,19 +1,19 @@
 import React from "react";
 
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { useSelector } from "react-redux";
-import ErrorIndicator from "../error-indicator";
-import Spinner from "../spinner";
+// import ErrorIndicator from "../error-indicator";
+// import Spinner from "../spinner";
 
 import routes from "../../configs/routes";
-import Login from "../auth/login/Login";
+// import Login from "../auth/login/Login";
 import AlertIndicator from "../alert-indicator";
 
 const App = () => {
 
-    const errorState = useSelector(({ errorIndicatorState }) => errorIndicatorState.error);
-    const loading = useSelector(({ appState }) => appState.loading);
+    // const errorState = useSelector(({ errorIndicatorState }) => errorIndicatorState.error);
+    // const loading = useSelector(({ appState }) => appState.loading);
     const user = useSelector(({ appState }) => appState.userRole);
     const alertIndicator = useSelector(({ alertIndicatorState }) => alertIndicatorState.alertIndicator);
 
@@ -26,9 +26,7 @@ const App = () => {
                     {
                         routes.map((route, idx) => {
                             const { role, exact, path, component } = route;
-                            if (role.includes(user)) {
-                                return <Route key={idx} role={role} exact={exact} path={path} component={component} />
-                            }
+                            return role.includes(user) && <Route key={idx} exact={exact} path={path} component={component} />
                         })
                     }
                 </Switch>

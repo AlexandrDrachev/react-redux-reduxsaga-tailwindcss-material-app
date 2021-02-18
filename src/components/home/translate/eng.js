@@ -6,7 +6,7 @@ export const eng = {
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    // cFirstLetter: "C first letter",
+    collection: "Collection",
 
     // D: "=====>",
     // dFirstLetter: "D first letter",

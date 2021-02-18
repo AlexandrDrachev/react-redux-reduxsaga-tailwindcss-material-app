@@ -15,6 +15,7 @@ import { ukr } from "./translate/ukr";
 import { translator } from "../../translator/translator";
 import AdminConfig from "./AdminConfig";
 import AssignmentIndOutlinedIcon from "@material-ui/icons/AssignmentIndOutlined";
+import { renderLanguageIcons } from "../../translator/example";
 
 const Admin = () => {
 
@@ -68,21 +69,6 @@ const Admin = () => {
         }
     }, []);
 
-    const renderLanguageIcons = () => {
-        return translator.map((t, idx) => {
-            return (
-                <IconButton
-                    className={`focus:outline-none mr-10 shadow-lg`}
-                    onClick={() => dispatch(onToggleLanguageAction(t.desc))}
-                    key={idx}>
-                    <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
-                        <img className={`w-full`} alt="" src={t.flag} />
-                    </div>
-                </IconButton>
-            );
-        });
-    };
-
     const renderRoutes = () => {
         return routes.map((route, idx) => {
             return (
@@ -116,7 +102,7 @@ const Admin = () => {
                     {l.adminDashboard}
                 </div>
                 <div className={`w-full flex justify-end items-center mr-20`}>
-                    {renderLanguageIcons()}
+                    {renderLanguageIcons(dispatch)}
                     <Link to="/">
                         <IconButton
                             className={`focus:outline-none mr-10 shadow-lg`}>

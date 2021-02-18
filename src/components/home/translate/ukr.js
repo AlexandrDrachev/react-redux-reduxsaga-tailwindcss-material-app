@@ -6,7 +6,7 @@ export const ukr = {
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    // cFirstLetter: "C first letter",
+      collection: 'Колекія',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",
