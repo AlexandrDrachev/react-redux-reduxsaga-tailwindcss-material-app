@@ -1,6 +1,7 @@
 export const eng = {
     // A: "=====>",
     adminDashboard: "Admin Dashboard",
+    analyticsButton: "analytics",
 
     // B: "=====>",
 
@@ -41,8 +42,11 @@ export const eng = {
 
     // T: "=====>",
     testBufferChannel: "test buffer channel:",
+    testBufferChannelButton: "test buffer",
 
     // U: "=====>",
+    usersButton: "users",
+    usersComponentHeader: "Users",
 
     // V: "=====>",
 

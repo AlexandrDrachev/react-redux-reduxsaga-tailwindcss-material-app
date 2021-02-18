@@ -5,11 +5,22 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/adminApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/adminApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translator/example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translator/example.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Рабочий стол/taskezy-2019-web-front-end" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-financial-independence" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,7 +81,9 @@
       <workItem from="1610435166962" duration="21277000" />
       <workItem from="1610523784335" duration="18940000" />
       <workItem from="1610551589930" duration="1806000" />
-      <workItem from="1610553976784" duration="32015000" />
+      <workItem from="1610553976784" duration="46581000" />
+      <workItem from="1610962260893" duration="68587000" />
+      <workItem from="1611305836341" duration="6262000" />
     </task>
     <servers />
   </component>

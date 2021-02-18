@@ -106,7 +106,7 @@ const eng = {
         return translator.map((t, idx) => {
             return (
                 <IconButton
-                    className={`focus:outline-none mr-10`}
+                    className={`focus:outline-none mr-10 shadow-lg`}
                     onClick={() => dispatch(onToggleLanguageAction(t.desc))}
                     key={idx}>
                     <div className={`w-20 h-20 flex flex-col justify-center items-center`}>

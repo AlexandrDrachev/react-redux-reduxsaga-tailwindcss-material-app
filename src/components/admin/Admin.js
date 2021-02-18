@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Redirect, Link } from "react-router-dom";
+import { Redirect, Link, Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Spinner from "../spinner";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -13,15 +13,18 @@ import { eng } from "./translate/eng";
 import { rus } from "./translate/rus";
 import { ukr } from "./translate/ukr";
 import { translator } from "../../translator/translator";
+import AdminConfig from "./AdminConfig";
+import AssignmentIndOutlinedIcon from "@material-ui/icons/AssignmentIndOutlined";
 
 const Admin = () => {
 
     const user = useSelector(({ authState }) => authState.user);
     const adminState = useSelector(({ adminState }) => adminState);
-    const { loading, loaded, users, testBufferCounter } = adminState;
+    const { loading, loaded, usersEntity, testBufferCounter } = adminState;
     const dispatch = useDispatch();
     const language = useSelector(({ appState }) => appState.language);
     const [ l, setL ] = useState({});
+    const [ routes, setRoutes ] = useState(null);
 
     useEffect(() => {
         if (language === "eng") {
@@ -36,7 +39,31 @@ const Admin = () => {
     }, [language]);
 
     useEffect(() => {
-        if (!users) {
+        if (Object.keys(l).length)  {
+            setRoutes([
+            {
+                title: l.testBufferChannelButton,
+                background: "bg-blue-300",
+                hover: "hover:bg-blue-400",
+                path: "/admin/test-buffer-channel"
+            },
+            {
+                title: l.usersButton,
+                background: "bg-green-400",
+                hover: "hover:bg-green-500",
+                path: "/admin/users"
+            },
+            {
+                title: l.analyticsButton,
+                background: "bg-red-400",
+                hover: "hover:bg-red-500",
+                path: "/admin/analytics"
+            }
+        ])}
+    }, [l]);
+
+    useEffect(() => {
+        if (!usersEntity) {
             dispatch(adminGetUsersAction());
         }
     }, []);
@@ -45,13 +72,30 @@ const Admin = () => {
         return translator.map((t, idx) => {
             return (
                 <IconButton
-                    className={`focus:outline-none mr-10`}
+                    className={`focus:outline-none mr-10 shadow-lg`}
                     onClick={() => dispatch(onToggleLanguageAction(t.desc))}
                     key={idx}>
                     <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
                         <img className={`w-full`} alt="" src={t.flag} />
                     </div>
                 </IconButton>
+            );
+        });
+    };
+
+    const renderRoutes = () => {
+        return routes.map((route, idx) => {
+            return (
+                <Link key={idx} to={route.path} className={`p-10 shadow-lg rounded-full my-20 mx-5`}>
+                    <div
+                         className={`
+                     w-100 h-100 rounded-full cursor-pointer ${route.background} flex flex-col justify-center 
+                     items-center font-bold text-xs ${route.hover}
+                     transition transform duration-100 ease-in-out hover:scale-125
+                `}>
+                        <div>{route.title}</div>
+                    </div>
+                </Link>
             );
         });
     };
@@ -65,44 +109,35 @@ const Admin = () => {
     }
 
     return (
-        <div className={`w-full flex flex-col justify-center items-center mt-40`}>
-            <div className={`w-full flex justify-end items-center mr-20`}>
-                {renderLanguageIcons()}
-                <Link to="/">
+        <div className={`w-full flex flex-col justify-center items-center p-20`}>
+            <div className={`w-full flex justify-between items-center`}>
+                <div className={`flex justify-center items-center text-white font-bold whitespace-nowrap ml-10`}>
+                    <AssignmentIndOutlinedIcon fontSize="small" className={`mr-10`} />
+                    {l.adminDashboard}
+                </div>
+                <div className={`w-full flex justify-end items-center mr-20`}>
+                    {renderLanguageIcons()}
+                    <Link to="/">
+                        <IconButton
+                            className={`focus:outline-none mr-10 shadow-lg`}>
+                            <HomeIcon className={`text-white`}/>
+                        </IconButton>
+                    </Link>
                     <IconButton
-                        className={`focus:outline-none mr-10`}>
-                        <HomeIcon />
+                        onClick={() => dispatch(logoutAction())}
+                        className={`focus:outline-none shadow-lg`}>
+                        <ExitToAppIcon className={`text-white`}/>
                     </IconButton>
-                </Link>
-                <IconButton
-                    onClick={() => dispatch(logoutAction())}
-                    className={`focus:outline-none`}>
-                    <ExitToAppIcon color="action"/>
-                </IconButton>
-            </div>
-            <div className={`text-white font-bold`}>
-                {l.adminDashboard}
-            </div>
-            <div className={`flex mt-40 sm:flex-col sm:justify-center sm:items-center`}>
-                <div className={`w-100 h-50 flex flex-col justify-center items-center bg-white rounded m-15 relative`}>
-                    {testBufferCounter}
-                    <div className={`absolute -top-15 text-xs text-white font-bold whitespace-nowrap`}>
-                        {l.testBufferChannel}
-                    </div>
-                </div>
-                <div
-                    className={`p-15 w-300 h-50 cursor-pointer rounded m-15 relative`}>
-                    <div
-                        onClick={() => dispatch(adminTestActionChannelAction())}
-                        className={`z-20 absolute w-full top-0 right-o bottom-0 left-0`}/>
-                    <div className={`
-                    z-10 absolute w-full top-0 right-o bottom-0 left-0 bg-white rounded flex flex-col justify-center 
-                    items-center
-                    `}>
-                        {l.pressSeveralTimesQuickly}
-                    </div>
                 </div>
             </div>
+            <div className={`w-full flex justify-center items-center shadow-lg`}>
+                {routes && renderRoutes()}
+            </div>
+            <Switch>
+                {AdminConfig.routes.map((route, idx) => {
+                    return <Route key={idx} role={route.role} path={route.path} exact={route.exact} component={route.component} />
+                })}
+            </Switch>
         </div>
     );
 };

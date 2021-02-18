@@ -98,6 +98,7 @@ const styles = (theme) => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
+        marginLeft: theme.spacing(9)
     },
     navBar: {
         display: "flex",
@@ -163,7 +164,7 @@ const Home = ({ classes, theme }) => {
         return translator.map((t, idx) => {
             return (
                 <IconButton
-                    className={`focus:outline-none mr-10`}
+                    className={`focus:outline-none mr-10 shadow-lg`}
                     onClick={() => dispatch(onToggleLanguageAction(t.desc))}
                     key={idx}>
                     <div className={`w-20 h-20 flex flex-col justify-center items-center`}>
@@ -306,9 +307,11 @@ const Home = ({ classes, theme }) => {
             </div>
             <div className={`${classes.content} w-full flex justify-start m-20`}>
                 <Button
+                    variant="contained"
+                    className={`p-10 focus:outline-none color-primary`}
                     disabled={alertIndicator}
                     onClick={() => dispatch(activeAlertIndicatorAction(testAlertMessage))}>
-                    test alert indicator
+                    {l.testAlertIndicatorButton}
                 </Button>
             </div>
         </div>

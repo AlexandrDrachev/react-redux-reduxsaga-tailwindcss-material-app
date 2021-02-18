@@ -9,7 +9,8 @@ export const dummyUsers = [
         password: "111",
         token: "eexxaammppllee%ttookkeenn#1",
         refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#1",
-        avatar: "https://randomuser.me/api/portraits/men/96.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/96.jpg",
+        locked: false
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export const dummyUsers = [
         password: "111",
         token: "eexxaammppllee%ttookkeenn#2",
         refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#2",
-        avatar: "https://randomuser.me/api/portraits/men/69.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/69.jpg",
+        locked: false
     },
     {
         id: 3,
@@ -29,7 +31,8 @@ export const dummyUsers = [
         password: "111",
         token: "eexxaammppllee%ttookkeenn#3",
         refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#3",
-        avatar: "https://randomuser.me/api/portraits/women/70.jpg"
+        avatar: "https://randomuser.me/api/portraits/women/70.jpg",
+        locked: true
     },
     {
         id: 4,
@@ -39,6 +42,7 @@ export const dummyUsers = [
         password: "111",
         token: "eexxaammppllee%ttookkeenn#4",
         refreshToken: "eexxaammppllee%rreeffrreesshh%ttookkeenn#4",
-        avatar: "https://randomuser.me/api/portraits/men/46.jpg"
+        avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+        locked: false
     }
 ];

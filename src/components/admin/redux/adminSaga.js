@@ -1,7 +1,7 @@
 import { take, call, put, select, actionChannel, delay } from "redux-saga/effects";
 
 import AdminApi from "../../../services/adminApi";
-import {adminTestActionChannelSaga} from "./adminActions";
+import { adminTestActionChannelSaga, adminGetUsersSaga } from "./adminActions";
 
 const adminApi = new AdminApi();
 const { getUsers } = adminApi;
@@ -15,7 +15,19 @@ export function* adminGetUsersWatcher() {
 
 function* adminGetUsersWorker() {
     const realData = yield select(({ appState }) => appState.realData);
-    yield call(getUsers, realData);
+    const users = yield call(getUsers, realData);
+    let usersIds = [];
+    const usersEntity = users.reduce((acc, val) => {
+        usersIds.push(val.id);
+        return {
+            ids: usersIds,
+            users: {
+                ...acc.users,
+                [val.id]: val
+            }
+        };
+    }, {});
+    yield put(adminGetUsersSaga(usersEntity));
 }
 
 export function* adminTestActionChannelWatcher() {

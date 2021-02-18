@@ -58,7 +58,7 @@ export const ukr = {
     settingsMenuItem: "Налаштування",
 
     // T: "=====>",
-    // tFirstLetter: "T first letter",
+    testAlertIndicatorButton: "ТЕСТОВЕ ІНФОРМАЦІЙНЕ ПОВІДОМЛЕННЯ",
 
     // U: "=====>",
     // uFirstLetter: "U first letter",

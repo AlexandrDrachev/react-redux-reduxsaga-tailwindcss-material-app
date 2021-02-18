@@ -58,7 +58,7 @@ export const eng = {
     settingsMenuItem: "Settings",
 
     // T: "=====>",
-    // tFirstLetter: "T first letter",
+    testAlertIndicatorButton: "TEST ALERT INDICATOR",
 
     // U: "=====>",
     // uFirstLetter: "U first letter",

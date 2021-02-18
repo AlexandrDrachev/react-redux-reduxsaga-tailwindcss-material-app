@@ -1,6 +1,7 @@
 export const rus = {
     // A: "=====>",
     adminDashboard: "Панель Администратора",
+    analyticsButton: "аналитика",
 
     // B: "=====>",
 
@@ -41,8 +42,11 @@ export const rus = {
 
     // T: "=====>",
     testBufferChannel: "тест буферного канала:",
+    testBufferChannelButton: "тест буфера",
 
     // U: "=====>",
+    usersButton: "пользователи",
+    usersComponentHeader: "Пользователи",
 
     // V: "=====>",
 

@@ -1,6 +1,7 @@
 export const ukr = {
     // A: "=====>",
     adminDashboard: "Панель Адміністратора",
+    analyticsButton: "аналітика",
 
     // B: "=====>",
 
@@ -41,8 +42,11 @@ export const ukr = {
 
     // T: "=====>",
     testBufferChannel: "тест буферного каналу",
+    testBufferChannelButton: "тест буферу",
 
     // U: "=====>",
+    usersButton: "користувачі",
+    usersComponentHeader: "Користувачі",
 
     // V: "=====>",
 

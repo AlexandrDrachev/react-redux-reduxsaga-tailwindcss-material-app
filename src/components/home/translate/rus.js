@@ -58,7 +58,7 @@ export const rus = {
     settingsMenuItem: "Настройки",
 
     // T: "=====>",
-    // tFirstLetter: "T first letter",
+    testAlertIndicatorButton: "ТЕСТОВОЕ ИНФОРМАЦИОННОЕ СООБЩЕНИЕ",
 
     // U: "=====>",
     // uFirstLetter: "U first letter",
