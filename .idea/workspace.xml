@@ -4,18 +4,17 @@
     <list default="true" id="5c7d5adf-1a82-4feb-89d0-b9af0273fd03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/users/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/AppConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/AppConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/authRoles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/authRoles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/rus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/ukr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configs/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translator/example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translator/example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-financial-independence" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,7 +79,11 @@
       <workItem from="1610553976784" duration="46581000" />
       <workItem from="1610962260893" duration="68587000" />
       <workItem from="1611305836341" duration="6262000" />
-      <workItem from="1613657953444" duration="2695000" />
+      <workItem from="1613657953444" duration="3957000" />
+      <workItem from="1613724389529" duration="15652000" />
+      <workItem from="1613976575849" duration="216000" />
+      <workItem from="1614064428262" duration="9299000" />
+      <workItem from="1614147955128" duration="10566000" />
     </task>
     <servers />
   </component>

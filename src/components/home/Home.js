@@ -51,7 +51,8 @@ const styles = (theme) => ({
     root: {
         flexGrow: 1,
         flexShrink: 1,
-        display: "flex"
+        display: "flex",
+        fontFamily: 'El Missiri',
     },
     grow: {
         // flexGrow: 1,
@@ -59,6 +60,7 @@ const styles = (theme) => ({
     menuButton: {
         marginLeft: 12,
         marginRight: 36,
+        fontFamily: 'El Missiri',
     },
     userMenu: {
         marginLeft: -12,
@@ -100,15 +102,23 @@ const styles = (theme) => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
-        marginLeft: theme.spacing(9)
+        marginLeft: theme.spacing(9),
+        fontFamily: 'El Missiri',
     },
     navBar: {
         display: "flex",
         flexShrink: 1,
         width: "100%",
         justifyContent: "space-between",
-        alignItems: "center"
-    }
+        alignItems: "center",
+    },
+    elMissiri: {
+        fontFamily: 'El Missiri',
+    },
+    elMissiriBold: {
+        fontFamily: 'El Missiri',
+        fontWeight: 'bold',
+    },
 });
 
 const Home = ({ classes, theme }) => {
@@ -222,7 +232,13 @@ const Home = ({ classes, theme }) => {
                                     <Link to={nav.path} key={index}>
                                         <ListItem button>
                                           <ListItemIcon>{nav.icon}</ListItemIcon>
-                                          <ListItemText primary={nav.desc} />
+                                          {/*<ListItemText*/}
+                                          {/*  className={classes.elMissiri}*/}
+                                          {/*  primary={nav.desc}*/}
+                                          {/*/>*/}
+                                          <Typography className={`${classes.elMissiriBold}`}>
+                                              {nav.desc}
+                                          </Typography>
                                         </ListItem>
                                     </Link>
                                 )}

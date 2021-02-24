@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
-import { eng } from "../../translate/eng";
-import { rus } from "../../translate/rus";
-import { ukr } from "../../translate/ukr";
-import {IconButton, Tooltip} from "@material-ui/core";
+import { eng } from '../../translate/eng';
+import { rus } from '../../translate/rus';
+import { ukr } from '../../translate/ukr';
+import { IconButton, Tooltip } from '@material-ui/core';
 import LockIcon from '@material-ui/icons/Lock';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import ModalConfirm from '../../../custom-collection/modals/confirm';
 
 const Users = () => {
 
@@ -19,13 +20,35 @@ const Users = () => {
     const { usersEntity } = adminState;
     const { users, ids } = usersEntity;
     const [ l, setL ] = useState({});
+    const [ lockUserModalConfirm, setLockUserModalConfirm ] = useState({
+        active: false,
+        id: null,
+        message: '',
+        action: null,
+        confirmButtonName: '',
+    });
+    const onToggleUserLock = (id) => {
+        const buttonName = users[id].locked ? 'Lock' : 'Unlock';
+        const confirmMessage = users[id].locked ? 'To unblock this user?' : 'To block this user?';
+        setLockUserModalConfirm({
+            ...lockUserModalConfirm,
+            active: true,
+            id: id,
+            confirmButtonName: buttonName,
+            message: confirmMessage,
+        });
+    };
 
     const renderUsersTable = () => {
         return (
-            <table className={`w-full text-white border-t border-white`}>
+            <div className={`w-full h-300 flex overflow-auto`}>
+                <table
+                  className={`
+                  w-full h-full text-white border-t border-white whitespace-nowrap overflow-auto
+                  `}>
                 <thead className={`w-full border-b border-white`}>
                     <tr className={`text-center`}>
-                        <td className={`mr-10`}>id</td>
+                        <td className={`pr-10`}>id</td>
                         <td>avatar</td>
                         <td>name</td>
                         <td>email</td>
@@ -41,34 +64,44 @@ const Users = () => {
                                 className={`
                                 hover:bg-blue-500 text-center
                                 `}>
-                                <td>{users[id].id}</td>
-                                <td className={`w-20 h-20`}>
-                                    <img alt="" src={users[id].avatar} className={`w-full rounded-full`}/>
+                                <td className={`pr-10`}>{users[id].id}</td>
+                                <td className={`w-20 h-20 pr-10`}>
+                                    <img alt="" src={users[id].avatar} className={`w-full rounded-full my-5`}/>
                                 </td>
-                                <td>{users[id].userName}</td>
-                                <td>{users[id].userEmail}</td>
-                                <td>{users[id].role}</td>
+                                <td className={`pr-10`}>{users[id].userName}</td>
+                                <td className={`pr-10`}>{users[id].userEmail}</td>
+                                <td className={`pr-10`}>{users[id].role}</td>
                                 <td>
                                     <div className={`flex justify-center items-center`}>
-                                        <IconButton>
+                                        <IconButton className={`focus:outline-none`}>
                                             {
                                                 users[id].locked ?
                                                 <Tooltip title={`unlocked?`} placement="left-start" arrow>
-                                                    <LockIcon className={`text-red-600 hover:text-gray-700`} />
+                                                    <LockIcon
+                                                      className={`text-red-600 hover:text-gray-700`}
+                                                      onClick={() => onToggleUserLock(id)}
+                                                    />
                                                 </Tooltip> :
                                                 <Tooltip title={`locked?`} placement="left-start" arrow>
-                                                    <LockOpenIcon className={`text-white hover:text-gray-700`}/>
+                                                    <LockOpenIcon
+                                                      className={`text-white hover:text-gray-700`}
+                                                      onClick={() => onToggleUserLock(id)}
+                                                    />
                                                 </Tooltip>
                                             }
                                         </IconButton>
-                                        <IconButton>
+                                        <IconButton className={`focus:outline-none`}>
                                             <Tooltip title={`read?`} placement="left-start" arrow>
-                                                <MailOutlineIcon className={`text-white hover:text-gray-700`}/>
+                                                <MailOutlineIcon
+                                                  className={`text-white hover:text-gray-700`}
+                                                />
                                             </Tooltip>
                                         </IconButton>
-                                        <IconButton>
+                                        <IconButton className={`focus:outline-none`}>
                                             <Tooltip title={`delete?`} placement="left-start" arrow>
-                                                <DeleteOutlineIcon className={`text-white hover:text-gray-700`}/>
+                                                <DeleteOutlineIcon
+                                                  className={`text-white hover:text-gray-700`}
+                                                />
                                             </Tooltip>
                                         </IconButton>
                                     </div>
@@ -78,6 +111,7 @@ const Users = () => {
                     })}
                 </tbody>
             </table>
+            </div>
         );
     };
 
@@ -94,11 +128,16 @@ const Users = () => {
     }, [language]);
 
     return (
-        <div className={`w-full p-20 flex flex-col justify-center items-center`}>
-            <div className={`font-bold text-white mb-10`}>
+        <div
+          className={`
+          w-full h-full flex flex-col justify-center items-center sm:items-start
+          `}
+        >
+            <div className={`font-bold text-white my-10`}>
                 {l.usersComponentHeader}
             </div>
             {renderUsersTable()}
+            {lockUserModalConfirm.active && <ModalConfirm data={lockUserModalConfirm} onClose={setLockUserModalConfirm} />}
         </div>
     );
 };

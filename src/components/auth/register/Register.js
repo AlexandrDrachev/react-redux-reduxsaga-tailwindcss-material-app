@@ -26,26 +26,32 @@ const styles = () => ({
         boxShadow: '7px 7px 10px 5px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)'
     },
     button: {
-        marginBottom: '20px'
+        marginBottom: '20px',
+        fontFamily: 'El Missiri',
     },
     input: {
         marginBottom: '20px',
         width: '100%',
-        maxWidth: '260px'
+        maxWidth: '260px',
+        fontFamily: 'El Missiri',
     },
     span1: {
-        fontSize: '10px'
+        fontSize: '10px',
+        fontFamily: 'El Missiri',
     },
     span2: {
         fontSize: '10px',
         fontWeight: 'bold',
         color: '#3f51b5',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        fontFamily: 'El Missiri',
     },
     headTitle: {
         fontSize: '20px',
         fontWeight: 'bold',
-        marginBottom: '20px'
+        marginBottom: '20px',
+        marginTop: '20px',
+        fontFamily: 'El Missiri',
     }
 });
 

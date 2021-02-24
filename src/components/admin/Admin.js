@@ -75,7 +75,8 @@ const Admin = () => {
                 <Link key={idx} to={route.path} className={`p-10 shadow-lg rounded-full my-20 mx-5`}>
                     <div
                          className={`
-                     w-100 h-100 rounded-full cursor-pointer ${route.background} flex flex-col justify-center 
+                     w-100 h-100 sm:h-50 sm:w-50 rounded-full cursor-pointer text-center
+                     ${route.background} flex flex-col justify-center 
                      items-center font-bold text-xs ${route.hover}
                      transition transform duration-100 ease-in-out hover:scale-125
                 `}>
@@ -95,25 +96,33 @@ const Admin = () => {
     }
 
     return (
-        <div className={`w-full flex flex-col justify-center items-center p-20`}>
-            <div className={`w-full flex justify-between items-center`}>
-                <div className={`flex justify-center items-center text-white font-bold whitespace-nowrap ml-10`}>
+        <div
+          className={`
+          w-full flex flex-col justify-start items-center p-20 sm:items-start overflow-hidden
+          `}>
+            <div className={`w-full flex justify-between items-center sm:flex-wrap sm:justify-center`}>
+                <div
+                  className={`
+                  flex justify-center items-center text-white font-bold whitespace-nowrap ml-10 sm:ml-0
+                  `}>
                     <AssignmentIndOutlinedIcon fontSize="small" className={`mr-10`} />
-                    {l.adminDashboard}
+                    <div className={`mt-4`}>{l.adminDashboard}</div>
                 </div>
-                <div className={`w-full flex justify-end items-center mr-20`}>
+                <div className={`w-full flex justify-end items-center mr-20 sm:mr-0 sm:flex-wrap sm:justify-center`}>
                     {renderLanguageIcons(dispatch)}
-                    <Link to="/">
+                    <div className={`flex order-2`}>
+                        <Link to="/">
+                            <IconButton
+                              className={`focus:outline-none mr-10 shadow-lg`}>
+                                <HomeIcon className={`text-white`}/>
+                            </IconButton>
+                        </Link>
                         <IconButton
-                            className={`focus:outline-none mr-10 shadow-lg`}>
-                            <HomeIcon className={`text-white`}/>
+                          onClick={() => dispatch(logoutAction())}
+                          className={`focus:outline-none shadow-lg`}>
+                            <ExitToAppIcon className={`text-white`}/>
                         </IconButton>
-                    </Link>
-                    <IconButton
-                        onClick={() => dispatch(logoutAction())}
-                        className={`focus:outline-none shadow-lg`}>
-                        <ExitToAppIcon className={`text-white`}/>
-                    </IconButton>
+                    </div>
                 </div>
             </div>
             <div className={`w-full flex justify-center items-center shadow-lg`}>

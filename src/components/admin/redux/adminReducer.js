@@ -1,5 +1,4 @@
 
-
 export const initialAdminState = {
     loading: false,
     loaded: false,
