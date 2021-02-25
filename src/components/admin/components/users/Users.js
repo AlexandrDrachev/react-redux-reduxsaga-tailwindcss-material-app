@@ -27,6 +27,7 @@ const Users = () => {
         action: null,
         confirmButtonName: '',
     });
+    const [ activeCell, setActiveCell ] = useState(null);
     const onToggleUserLock = (id) => {
         const buttonName = users[id].locked ? 'Lock' : 'Unlock';
         const confirmMessage = users[id].locked ? 'To unblock this user?' : 'To block this user?';
@@ -41,10 +42,10 @@ const Users = () => {
 
     const renderUsersTable = () => {
         return (
-            <div className={`w-full h-300 flex overflow-auto`}>
+            <div className={`w-full sm:h-300 flex overflow-auto`}>
                 <table
                   className={`
-                  w-full h-full text-white border-t border-white whitespace-nowrap overflow-auto
+                  w-full text-white border-t border-white whitespace-nowrap
                   `}>
                 <thead className={`w-full border-b border-white`}>
                     <tr className={`text-center`}>
@@ -56,13 +57,15 @@ const Users = () => {
                         <td>actions</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className={`overflow-auto`}>
                     {ids.map((id) => {
                         return (
                             <tr
                                 key={id}
+                                onClick={() => setActiveCell(id)}
                                 className={`
                                 hover:bg-blue-500 text-center
+                                ${activeCell === id && `bg-blue-500`}
                                 `}>
                                 <td className={`pr-10`}>{users[id].id}</td>
                                 <td className={`w-20 h-20 pr-10`}>
@@ -130,7 +133,7 @@ const Users = () => {
     return (
         <div
           className={`
-          w-full h-full flex flex-col justify-center items-center sm:items-start
+          w-full flex flex-col justify-center items-center sm:items-start
           `}
         >
             <div className={`font-bold text-white my-10`}>

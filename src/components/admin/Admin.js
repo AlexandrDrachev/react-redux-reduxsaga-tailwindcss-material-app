@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 import { Redirect, Link, Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +15,9 @@ import { ukr } from "./translate/ukr";
 import { translator } from "../../translator/translator";
 import AdminConfig from "./AdminConfig";
 import AssignmentIndOutlinedIcon from "@material-ui/icons/AssignmentIndOutlined";
+import PeopleIcon from '@material-ui/icons/People'; /*UsersIcon*/
+import BarChartIcon from '@material-ui/icons/BarChart'; /*AnalyticsIcon*/
+import TouchAppIcon from '@material-ui/icons/TouchApp'; /*TestBufferChannelIcon*/
 import { renderLanguageIcons } from "../../translator/example";
 
 const Admin = () => {
@@ -98,7 +101,7 @@ const Admin = () => {
     return (
         <div
           className={`
-          w-full flex flex-col justify-start items-center p-20 sm:items-start overflow-hidden
+          w-full flex flex-col justify-start items-center p-20 sm:items-start overflow-auto
           `}>
             <div className={`w-full flex justify-between items-center sm:flex-wrap sm:justify-center`}>
                 <div
