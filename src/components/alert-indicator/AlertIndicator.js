@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { useDispatch, useSelector } from "react-redux";
-import { closeAlertIndicatorAction } from "./redux/alertIndicatorActions";
+import { useDispatch, useSelector } from 'react-redux';
+import { closeAlertIndicatorAction } from './redux/alertIndicatorActions';
 
 const AlertIndicator = () => {
 
@@ -10,13 +10,14 @@ const AlertIndicator = () => {
 
     return (
         <div className={`
-        z-500000 absolute w-300 top-100 right-0 slide-right p-20 bg-white rounded flex flex-col justify-center items-center
-        `}>
+        z-500000 absolute w-300 top-100 right-0 slide-right p-20 bg-white rounded flex flex-col justify-center items-center`}
+        >
             <div className={`w-full flex`}>
                 {message}
                 <div
                     onClick={() => dispatch(closeAlertIndicatorAction())}
-                    className={`flex justify-end ml-20 fond-bold text-red-500 cursor-pointer text-xs`}>
+                    className={`flex justify-end ml-20 fond-bold text-red-500 cursor-pointer text-xs`}
+                >
                     &#10060;
                 </div>
             </div>

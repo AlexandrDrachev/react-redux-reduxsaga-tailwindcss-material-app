@@ -1,32 +1,34 @@
 
-
 export const initialAuthState = {
     loading: false,
     user: null,
-    userRole: null
+    userRole: null,
 };
 
 export const authReducer = (state, action) => {
     switch (action.type) {
-        case "LOADING_AUTH_PAGE_ACTION":
+
+        case 'LOADING_AUTH_PAGE_ACTION':
             return {
                 ...state,
-                loading: action.payload
-            }
-        case "GET_AUTH_SAGA":
-            return {
-                ...state,
-                user: action.payload,
-                userRole: action.payload.role
-            };
-        case "GET_REGISTER_SAGA":
-            return {
-                ...state,
-                user: action.payload,
-                userRole: action.payload.role
+                loading: action.payload,
             };
 
-        case "LOGOUT_ACTION":
+        case 'GET_AUTH_SAGA':
+            return {
+                ...state,
+                user: action.payload,
+                userRole: action.payload.role,
+            };
+
+        case 'GET_REGISTER_SAGA':
+            return {
+                ...state,
+                user: action.payload,
+                userRole: action.payload.role,
+            };
+
+        case 'LOGOUT_ACTION':
             return initialAuthState;
 
         default:

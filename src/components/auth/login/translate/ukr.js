@@ -9,7 +9,7 @@ export const ukr = {
     // cFirstLetter: "C first letter",
 
     // D: "=====>",
-    dontHaveAnAccount: "Не маєш власного акаунту?",
+    dontHaveAnAccount: 'Не маєш власного акаунту?',
 
     // E: "=====>",
     // exampleString: "Example string",
@@ -33,9 +33,9 @@ export const ukr = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginToYourAccount: "ВХІД У СВІЙ АКАУНТ",
-    loginPlaceholder: "Логін",
-    loginButton: "АВТОРИЗУВАТИСЬ",
+    loginToYourAccount: 'ВХІД У СВІЙ АКАУНТ',
+    loginPlaceholder: 'Логін',
+    loginButton: 'АВТОРИЗУВАТИСЬ',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -47,13 +47,13 @@ export const ukr = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Пароль",
+    passwordPlaceholder: 'Пароль',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registrationLink: "Реєстрація",
+    registrationLink: 'Реєстрація',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

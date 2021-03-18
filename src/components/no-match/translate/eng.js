@@ -9,7 +9,7 @@ export const eng = {
     // cFirstLetter: "C first letter",
 
     // D:
-    desc: "The page does not exist or you cannot view this content!",
+    desc: 'The page does not exist or you cannot view this content!',
 
     // E:
     // exampleString: "Example string",
@@ -18,7 +18,7 @@ export const eng = {
     // fFirstLetter: "F first letter",
 
     // G:
-    goBackButton: "Go Back",
+    goBackButton: 'Go Back',
 
     // H:
     // hFirstLetter: "H first letter",
@@ -33,8 +33,8 @@ export const eng = {
     // kFirstLetter: "K first letter",
 
     // L:
-    loginLink: "Login",
-    label: "Page not found!",
+    loginLink: 'Login',
+    label: 'Page not found!',
 
     // M:
     // mFirstLetter: "M first letter",

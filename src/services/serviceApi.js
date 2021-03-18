@@ -1,5 +1,5 @@
-import { dummyUsers } from "./fake-data/dummyUsers";
-import {getErrorWorker} from "../components/error-indicator/redux/errorIndicatorSaga";
+import { dummyUsers } from './fake-data/dummyUsers';
+// import { getErrorWorker } from "../components/error-indicator/redux/errorIndicatorSaga";
 
 export default class ServiceApi{
 
@@ -45,19 +45,19 @@ export default class ServiceApi{
                         userEmail: email,
                         password: password,
                         token: `eexxaammppllee%ttookkeenn#${users.length}`,
-                        refreshToken: `eexxaammppllee%rreeffrreesshh%ttookkeenn#${users.length}`
+                        refreshToken: `eexxaammppllee%rreeffrreesshh%ttookkeenn#${users.length}`,
                     };
                     if (checkLogin) {
                         resolve({
                             error: true,
-                            messageError: "A user with this login already exists",
-                            titleError: "Registration error!"
+                            messageError: 'A user with this login already exists',
+                            titleError: 'Registration error!',
                         });
                     } else if (checkEmail) {
                         resolve({
                             error: true,
-                            messageError: "A user with this email already exists",
-                            titleError: "Registration error!"
+                            messageError: 'A user with this email already exists',
+                            titleError: 'Registration error!',
                         });
                     } else {
                         dummyUsers.push(newUser);
@@ -69,8 +69,8 @@ export default class ServiceApi{
                     if (Math.random() > 0.75) {
                         return {
                             error: true,
-                            messageError: "An error occurred on the server, please try again",
-                            titleError: "Server error!"
+                            messageError: 'An error occurred on the server, please try again',
+                            titleError: 'Server error!',
                         };
                     }
                     return res;
@@ -78,11 +78,10 @@ export default class ServiceApi{
                 .catch(() => {
                     return {
                         error: true,
-                        messageError: "An error occurred on the server, please try again",
-                        titleError: "Server error!"
+                        messageError: 'An error occurred on the server, please try again',
+                        titleError: 'Server error!',
                     };
                 });
         }
     };
-
 }

@@ -1,7 +1,7 @@
 export const eng = {
     // A: "=====>",
-    adminDashboard: "Admin Dashboard",
-    analyticsButton: "analytics",
+    adminDashboard: 'Admin Dashboard',
+    analyticsButton: 'analytics',
 
     // B: "=====>",
 
@@ -32,7 +32,7 @@ export const eng = {
     // O: "=====>",
 
     // P: "=====>",
-    pressSeveralTimesQuickly: "press several times quickly",
+    pressSeveralTimesQuickly: 'press several times quickly',
 
     // Q: "=====>",
 
@@ -41,12 +41,12 @@ export const eng = {
     // S: "=====>",
 
     // T: "=====>",
-    testBufferChannel: "test buffer channel:",
-    testBufferChannelButton: "test buffer",
+    testBufferChannel: 'test buffer channel:',
+    testBufferChannelButton: 'test buffer',
 
     // U: "=====>",
-    usersButton: "users",
-    usersComponentHeader: "Users",
+    usersButton: 'users',
+    usersComponentHeader: 'Users',
 
     // V: "=====>",
 

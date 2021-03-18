@@ -1,11 +1,11 @@
-import React from "react";
-import Login from "./login";
-import Register from "./register";
-import { Switch, Route } from "react-router-dom";
-import NoMatch from "../no-match";
-import { useSelector } from "react-redux";
-import Spinner from "../spinner";
-import ErrorIndicator from "../error-indicator";
+import React from 'react';
+import Login from './login';
+import Register from './register';
+import { Switch, Route } from 'react-router-dom';
+import NoMatch from '../no-match';
+import { useSelector } from 'react-redux';
+import Spinner from '../spinner';
+import ErrorIndicator from '../error-indicator';
 
 const Auth = () => {
 

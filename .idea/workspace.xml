@@ -4,9 +4,81 @@
     <list default="true" id="5c7d5adf-1a82-4feb-89d0-b9af0273fd03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/analytics/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/analytics/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/analytics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/analytics/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/test-buffer-channel/TestBufferChannel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/test-buffer-channel/TestBufferChannel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/test-buffer-channel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/test-buffer-channel/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/admin/components/users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/users/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/components/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/components/users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/redux/adminSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/redux/adminSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alert-indicator/AlertIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert-indicator/AlertIndicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alert-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert-indicator/redux/alertIndicatorSaga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/AppConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/AppConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/redux/appActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/redux/appActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/redux/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/redux/appReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/authRoles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/authRoles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/login/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/redux/authSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/redux/authSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/register/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-collection/CustomCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-collection/CustomCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-collection/CustomCollectionConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-collection/CustomCollectionConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-collection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-collection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-collection/modals/confirm/ModalConfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-collection/modals/confirm/ModalConfirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-collection/modals/confirm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-collection/modals/confirm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/redux/errorIndicatorSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/NoMatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/NoMatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/NoMatchConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/NoMatchConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/translate/eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/translate/eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/translate/rus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/translate/rus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/no-match/translate/ukr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/no-match/translate/ukr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/adminApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/adminApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fake-data/dummyCurrencies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fake-data/dummyCurrencies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fake-data/dummyUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/serviceApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/serviceApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translator/example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translator/example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translator/translator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translator/translator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +102,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -76,11 +152,23 @@
       <workItem from="1613976575849" duration="216000" />
       <workItem from="1614064428262" duration="9299000" />
       <workItem from="1614147955128" duration="11311000" />
-      <workItem from="1614235001638" duration="9436000" />
+      <workItem from="1614235001638" duration="9802000" />
+      <workItem from="1614321892324" duration="4791000" />
+      <workItem from="1614590191906" duration="2757000" />
+      <workItem from="1614667681360" duration="6096000" />
+      <workItem from="1615293935080" duration="687000" />
+      <workItem from="1615791065855" duration="8496000" />
+      <workItem from="1615881915511" duration="2902000" />
+      <workItem from="1615971529724" duration="9655000" />
+      <workItem from="1616054632164" duration="7081000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

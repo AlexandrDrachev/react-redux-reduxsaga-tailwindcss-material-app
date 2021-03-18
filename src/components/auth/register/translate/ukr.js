@@ -1,18 +1,18 @@
 export const ukr = {
     // A: "=====>",
-    alreadyHaveAnAccount: "Вже маєте акаунт?",
+    alreadyHaveAnAccount: 'Вже маєте акаунт?',
 
     // B: "=====>",
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    createAnAccount: "РЕЄСТРАЦІЯ НОВОГО АКАУНТУ",
+    createAnAccount: 'РЕЄСТРАЦІЯ НОВОГО АКАУНТУ',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",
 
     // E: "=====>",
-    emailPlaceholder: "Е-пошта",
+    emailPlaceholder: 'Е-пошта',
 
     // F: "=====>",
     // fFirstLetter: "F first letter",
@@ -33,8 +33,8 @@ export const ukr = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginPlaceholder: "Логін",
-    loginLink: "Авторизуватись",
+    loginPlaceholder: 'Логін',
+    loginLink: 'Авторизуватись',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -46,14 +46,14 @@ export const ukr = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Пароль",
-    passwordConfirmPlaceholder: "Пароль(Ще раз)",
+    passwordPlaceholder: 'Пароль',
+    passwordConfirmPlaceholder: 'Пароль(Ще раз)',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registerButton: "ЗАРЕЄСТРУВАТИСЬ",
+    registerButton: 'ЗАРЕЄСТРУВАТИСЬ',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

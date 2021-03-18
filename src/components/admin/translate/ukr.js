@@ -1,7 +1,7 @@
 export const ukr = {
     // A: "=====>",
-    adminDashboard: "Панель Адміністратора",
-    analyticsButton: "аналітика",
+    adminDashboard: 'Панель Адміністратора',
+    analyticsButton: 'аналітика',
 
     // B: "=====>",
 
@@ -32,7 +32,7 @@ export const ukr = {
     // O: "=====>",
 
     // P: "=====>",
-    pressSeveralTimesQuickly: "натисніть швидко декілька раз",
+    pressSeveralTimesQuickly: 'натисніть швидко декілька раз',
 
     // Q: "=====>",
 
@@ -41,12 +41,12 @@ export const ukr = {
     // S: "=====>",
 
     // T: "=====>",
-    testBufferChannel: "тест буферного каналу",
-    testBufferChannelButton: "тест буферу",
+    testBufferChannel: 'тест буферного каналу',
+    testBufferChannelButton: 'тест буферу',
 
     // U: "=====>",
-    usersButton: "користувачі",
-    usersComponentHeader: "Користувачі",
+    usersButton: 'користувачі',
+    usersComponentHeader: 'Користувачі',
 
     // V: "=====>",
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { translator } from "./translator";
-import { onToggleLanguageAction } from "../components/app/redux/appActions";
+import { translator } from './translator';
+import { onToggleLanguageAction } from '../components/app/redux/appActions';
 
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from '@material-ui/core/IconButton';
 
-const eng = {
+// const eng = {
     // A:
     // aFirstLetter: "A first letter",
 
@@ -83,7 +83,7 @@ const eng = {
 
     // Z:
     // zFirstLetter: "Z first letter",
-};
+// };
 
 //using:
 

@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { Redirect, Link, Switch, Route } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import Spinner from "../spinner";
+import { Redirect, Link, Switch, Route } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+// import Spinner from '../spinner';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HomeIcon from '@material-ui/icons/Home';
 import IconButton from '@material-ui/core/IconButton';
-import { adminGetUsersAction, adminTestActionChannelAction } from "./redux/adminActions";
-import { onToggleLanguageAction } from "../app/redux/appActions";
-import { logoutAction } from "../auth/redux/authActions";
-import { eng } from "./translate/eng";
-import { rus } from "./translate/rus";
-import { ukr } from "./translate/ukr";
-import { translator } from "../../translator/translator";
-import AdminConfig from "./AdminConfig";
-import AssignmentIndOutlinedIcon from "@material-ui/icons/AssignmentIndOutlined";
+import { adminGetUsersAction, adminTestActionChannelAction } from './redux/adminActions';
+// import { onToggleLanguageAction } from '../app/redux/appActions';
+import { logoutAction } from '../auth/redux/authActions';
+import { eng } from './translate/eng';
+import { rus } from './translate/rus';
+import { ukr } from './translate/ukr';
+// import { translator } from '../../translator/translator';
+import AdminConfig from './AdminConfig';
+import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import PeopleIcon from '@material-ui/icons/People'; /*UsersIcon*/
 import BarChartIcon from '@material-ui/icons/BarChart'; /*AnalyticsIcon*/
 import TouchAppIcon from '@material-ui/icons/TouchApp'; /*TestBufferChannelIcon*/
-import { renderLanguageIcons } from "../../translator/example";
+import { renderLanguageIcons } from '../../translator/example';
 
 const Admin = () => {
 
@@ -31,13 +31,13 @@ const Admin = () => {
     const [ routes, setRoutes ] = useState(null);
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);
@@ -47,21 +47,21 @@ const Admin = () => {
             setRoutes([
             {
                 title: l.testBufferChannelButton,
-                background: "bg-blue-300",
-                hover: "hover:bg-blue-400",
-                path: "/admin/test-buffer-channel"
+                background: 'bg-blue-300',
+                hover: 'hover:bg-blue-400',
+                path: '/admin/test-buffer-channel',
             },
             {
                 title: l.usersButton,
-                background: "bg-green-400",
-                hover: "hover:bg-green-500",
-                path: "/admin/users"
+                background: 'bg-green-400',
+                hover: 'hover:bg-green-500',
+                path: '/admin/users',
             },
             {
                 title: l.analyticsButton,
-                background: "bg-red-400",
-                hover: "hover:bg-red-500",
-                path: "/admin/analytics"
+                background: 'bg-red-400',
+                hover: 'hover:bg-red-500',
+                path: '/admin/analytics',
             }
         ])}
     }, [l]);
@@ -78,11 +78,11 @@ const Admin = () => {
                 <Link key={idx} to={route.path} className={`p-10 shadow-lg rounded-full my-20 mx-5`}>
                     <div
                          className={`
-                     w-100 h-100 sm:h-50 sm:w-50 rounded-full cursor-pointer text-center
-                     ${route.background} flex flex-col justify-center 
-                     items-center font-bold text-xs ${route.hover}
-                     transition transform duration-100 ease-in-out hover:scale-125
-                `}>
+                         w-100 h-100 sm:h-50 sm:w-50 rounded-full cursor-pointer text-center
+                         ${route.background} flex flex-col justify-center 
+                         items-center font-bold text-xs ${route.hover}
+                         transition transform duration-100 ease-in-out hover:scale-125`}
+                    >
                         <div>{route.title}</div>
                     </div>
                 </Link>
@@ -106,8 +106,8 @@ const Admin = () => {
             <div className={`w-full flex justify-between items-center sm:flex-wrap sm:justify-center`}>
                 <div
                   className={`
-                  flex justify-center items-center text-white font-bold whitespace-nowrap ml-10 sm:ml-0
-                  `}>
+                  flex justify-center items-center text-white font-bold whitespace-nowrap ml-10 sm:ml-0`}
+                >
                     <AssignmentIndOutlinedIcon fontSize="small" className={`mr-10`} />
                     <div className={`mt-4`}>{l.adminDashboard}</div>
                 </div>

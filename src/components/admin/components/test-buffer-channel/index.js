@@ -1,3 +1,3 @@
-import TestBufferChannel from "./TestBufferChannel";
+import TestBufferChannel from './TestBufferChannel';
 
 export default TestBufferChannel;

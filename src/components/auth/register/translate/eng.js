@@ -1,18 +1,18 @@
 export const eng = {
     // A: "=====>",
-    alreadyHaveAnAccount: "Already have an account?",
+    alreadyHaveAnAccount: 'Already have an account?',
 
     // B: "=====>",
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    createAnAccount: "CREATE AN ACCOUNT",
+    createAnAccount: 'CREATE AN ACCOUNT',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",
 
     // E: "=====>",
-    emailPlaceholder: "E-mail",
+    emailPlaceholder: 'E-mail',
 
     // F: "=====>",
     // fFirstLetter: "F first letter",
@@ -33,8 +33,8 @@ export const eng = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginPlaceholder: "Login",
-    loginLink: "Login",
+    loginPlaceholder: 'Login',
+    loginLink: 'Login',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -46,14 +46,14 @@ export const eng = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Password",
-    passwordConfirmPlaceholder: "Password(Confirm)",
+    passwordPlaceholder: 'Password',
+    passwordConfirmPlaceholder: 'Password(Confirm)',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registerButton: "REGISTER",
+    registerButton: 'REGISTER',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

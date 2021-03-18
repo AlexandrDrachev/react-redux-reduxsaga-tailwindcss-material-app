@@ -9,7 +9,7 @@ export const rus = {
     // cFirstLetter: "C first letter",
 
     // D: "=====>",
-    dontHaveAnAccount: "Нет учетной записи?",
+    dontHaveAnAccount: 'Нет учетной записи?',
 
     // E: "=====>",
     // exampleString: "Example string",
@@ -33,9 +33,9 @@ export const rus = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginToYourAccount: "ВХОД В СВОЙ АККАУНТ",
-    loginPlaceholder: "Логин",
-    loginButton: "АВТОРИЗОВАТЬСЯ",
+    loginToYourAccount: 'ВХОД В СВОЙ АККАУНТ',
+    loginPlaceholder: 'Логин',
+    loginButton: 'АВТОРИЗОВАТЬСЯ',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -47,13 +47,13 @@ export const rus = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Пароль",
+    passwordPlaceholder: 'Пароль',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registrationLink: "Регистрация",
+    registrationLink: 'Регистрация',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

@@ -9,7 +9,7 @@ export const ukr = {
     // cFirstLetter: "C first letter",
 
     // D:
-    desc: "Сторінка не існує, або ви не можете переглядати її вміст!",
+    desc: 'Сторінка не існує, або ви не можете переглядати її вміст!',
 
     // E:
     // exampleString: "Example string",
@@ -18,7 +18,7 @@ export const ukr = {
     // fFirstLetter: "F first letter",
 
     // G:
-    goBackButton: "Назад",
+    goBackButton: 'Назад',
 
     // H:
     // hFirstLetter: "H first letter",
@@ -33,8 +33,8 @@ export const ukr = {
     // kFirstLetter: "K first letter",
 
     // L:
-    loginLink: "Логін",
-    label: "Сторінка не знайдена!",
+    loginLink: 'Логін',
+    label: 'Сторінка не знайдена!',
 
     // M:
     // mFirstLetter: "M first letter",

@@ -45,8 +45,8 @@ const Users = () => {
             <div className={`w-full sm:h-300 flex overflow-auto`}>
                 <table
                   className={`
-                  w-full text-white border-t border-white whitespace-nowrap
-                  `}>
+                  w-full text-white border-t border-white whitespace-nowrap`}
+                >
                 <thead className={`w-full border-b border-white`}>
                     <tr className={`text-center`}>
                         <td className={`pr-10`}>id</td>
@@ -119,13 +119,13 @@ const Users = () => {
     };
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);
@@ -133,8 +133,7 @@ const Users = () => {
     return (
         <div
           className={`
-          w-full flex flex-col justify-center items-center sm:items-start
-          `}
+          w-full flex flex-col justify-center items-center sm:items-start`}
         >
             <div className={`font-bold text-white my-10`}>
                 {l.usersComponentHeader}

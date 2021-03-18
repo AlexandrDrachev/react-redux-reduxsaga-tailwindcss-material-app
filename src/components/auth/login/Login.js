@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { Link, Redirect } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link, Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+// import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -14,17 +14,17 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { getAuthAction } from "../redux/authActions";
-import { onToggleLanguageAction } from "../../app/redux/appActions";
-import ErrorIndicator from "../../error-indicator";
-import { eng } from "./translate/eng";
-import { rus } from "./translate/rus";
-import { ukr } from "./translate/ukr";
-import { translator } from "../../../translator/translator";
+import { getAuthAction } from '../redux/authActions';
+import { onToggleLanguageAction } from '../../app/redux/appActions';
+import ErrorIndicator from '../../error-indicator';
+import { eng } from './translate/eng';
+import { rus } from './translate/rus';
+import { ukr } from './translate/ukr';
+import { translator } from '../../../translator/translator';
 
 const styles = () => ({
     card: {
-        boxShadow: '7px 7px 10px 5px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)'
+        boxShadow: '7px 7px 10px 5px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
     },
     button: {
         marginBottom: '20px',
@@ -53,7 +53,7 @@ const styles = () => ({
         marginBottom: '20px',
         marginTop: '20px',
         fontFamily: 'El Missiri',
-    }
+    },
 });
 
 const Login = (props) => {
@@ -63,8 +63,8 @@ const Login = (props) => {
     const [ showPass, setShowPass ] = useState(false);
     const { classes } = props;
     const [ user, setUser ] = useState({
-        login: "",
-        password: ""
+        login: '',
+        password: '',
     });
     const authError = useSelector(({ errorIndicatorState }) => errorIndicatorState);
     const onSubmit = () => {
@@ -74,21 +74,21 @@ const Login = (props) => {
     const [ l, setL ] = useState({});
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);
 
     useEffect(() => {
-        console.log("login: ", user.login);
-        console.log("pass: ", user.password);
-        console.log("authError: ", authError);
+        console.log('login: ', user.login);
+        console.log('pass: ', user.password);
+        console.log('authError: ', authError);
     }, [user]);
 
     const renderLanguageIcons = () => {
@@ -119,7 +119,8 @@ const Login = (props) => {
             <div className={`absolute top-0 right-0 bottom-0 left-0 flex flex-col justify-center items-center`}>
                 <Card
                     className={`w-2/3 sm:w-full py-50 flex flex-col justify-center items-center border-2 border-white
-                    rounded ${classes.card}`}>
+                    rounded ${classes.card}`}
+                >
                     <div className={`w-full flex justify-center items-center`}>
                         {renderLanguageIcons()}
                     </div>

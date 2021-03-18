@@ -1,5 +1,4 @@
 
-
 export const adminGetUsersAction = () => {
     return {
         type: 'ADMIN_GET_USERS_ACTION',

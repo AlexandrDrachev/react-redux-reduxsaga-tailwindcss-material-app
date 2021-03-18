@@ -1,14 +1,14 @@
-import { take, call, put, select, actionChannel, delay } from "redux-saga/effects";
+import { take, call, put, select, actionChannel, delay } from 'redux-saga/effects';
 
-import AdminApi from "../../../services/adminApi";
-import { adminTestActionChannelSaga, adminGetUsersSaga } from "./adminActions";
+import AdminApi from '../../../services/adminApi';
+import { adminTestActionChannelSaga, adminGetUsersSaga } from './adminActions';
 
 const adminApi = new AdminApi();
 const { getUsers } = adminApi;
 
 export function* adminGetUsersWatcher() {
     while (true) {
-        yield take("ADMIN_GET_USERS_ACTION");
+        yield take('ADMIN_GET_USERS_ACTION');
         yield call(adminGetUsersWorker);
     }
 }
@@ -31,7 +31,7 @@ function* adminGetUsersWorker() {
 }
 
 export function* adminTestActionChannelWatcher() {
-    const reqChannel = yield actionChannel("ADMIN_TEST_ACTION_CHANNEL_ACTION");
+    const reqChannel = yield actionChannel('ADMIN_TEST_ACTION_CHANNEL_ACTION');
     while (true) {
         yield take(reqChannel);
         yield call(adminTestActionChannelWorker);

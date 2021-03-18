@@ -1,18 +1,18 @@
 export const rus = {
     // A: "=====>",
-    alreadyHaveAnAccount: "Уже есть аккаунт?",
+    alreadyHaveAnAccount: 'Уже есть аккаунт?',
 
     // B: "=====>",
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    createAnAccount: "РЕГИСТРАЦИЯ НОВОГО АКАУНТА",
+    createAnAccount: 'РЕГИСТРАЦИЯ НОВОГО АКАУНТА',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",
 
     // E: "=====>",
-    emailPlaceholder: "Е-почта",
+    emailPlaceholder: 'Е-почта',
 
     // F: "=====>",
     // fFirstLetter: "F first letter",
@@ -33,8 +33,8 @@ export const rus = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginPlaceholder: "Логин",
-    loginLink: "Авторизоваться",
+    loginPlaceholder: 'Логин',
+    loginLink: 'Авторизоваться',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -46,14 +46,14 @@ export const rus = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Пароль",
-    passwordConfirmPlaceholder: "Пароль(Ещё раз)",
+    passwordPlaceholder: 'Пароль',
+    passwordConfirmPlaceholder: 'Пароль(Ещё раз)',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registerButton: "ЗАРЕГИСТРИРОВАТЬСЯ",
+    registerButton: 'ЗАРЕГИСТРИРОВАТЬСЯ',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

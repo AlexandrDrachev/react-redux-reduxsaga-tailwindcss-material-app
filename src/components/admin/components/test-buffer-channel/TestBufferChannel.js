@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
-import { eng } from "../../translate/eng";
-import { rus } from "../../translate/rus";
-import { ukr } from "../../translate/ukr";
-import { translator } from "../../../../translator/translator";
-import {adminTestActionChannelAction} from "../../redux/adminActions";
+import { eng } from '../../translate/eng';
+import { rus } from '../../translate/rus';
+import { ukr } from '../../translate/ukr';
+// import { translator } from '../../../../translator/translator';
+import { adminTestActionChannelAction } from '../../redux/adminActions';
 
 const TestBufferChannel = () => {
 
@@ -17,13 +17,13 @@ const TestBufferChannel = () => {
     const [ l, setL ] = useState({});
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);
@@ -46,9 +46,8 @@ const TestBufferChannel = () => {
                         onClick={() => dispatch(adminTestActionChannelAction())}
                         className={`z-20 absolute w-full top-0 right-o bottom-0 left-0`}/>
                     <div className={`
-                    z-10 absolute w-full top-0 right-o bottom-0 left-0 bg-white rounded flex flex-col justify-center 
-                    items-center
-                    `}>
+                    z-10 absolute w-full top-0 right-o bottom-0 left-0 bg-white rounded flex flex-col justify-center`}
+                    >
                         {l.pressSeveralTimesQuickly}
                     </div>
                 </div>

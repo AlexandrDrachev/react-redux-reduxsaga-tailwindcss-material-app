@@ -1,7 +1,7 @@
 export const rus = {
     // A: "=====>",
-    adminDashboard: "Панель Администратора",
-    analyticsButton: "аналитика",
+    adminDashboard: 'Панель Администратора',
+    analyticsButton: 'аналитика',
 
     // B: "=====>",
 
@@ -32,7 +32,7 @@ export const rus = {
     // O: "=====>",
 
     // P: "=====>",
-    pressSeveralTimesQuickly: "нажмите быстро несколько раз",
+    pressSeveralTimesQuickly: 'нажмите быстро несколько раз',
 
     // Q: "=====>",
 
@@ -41,12 +41,12 @@ export const rus = {
     // S: "=====>",
 
     // T: "=====>",
-    testBufferChannel: "тест буферного канала:",
-    testBufferChannelButton: "тест буфера",
+    testBufferChannel: 'тест буферного канала:',
+    testBufferChannelButton: 'тест буфера',
 
     // U: "=====>",
-    usersButton: "пользователи",
-    usersComponentHeader: "Пользователи",
+    usersButton: 'пользователи',
+    usersComponentHeader: 'Пользователи',
 
     // V: "=====>",
 

@@ -1,27 +1,26 @@
 
-
 export const initialAppState = {
     realData: false,
-    userRole: "user",
+    userRole: 'user',
     loading: true,
     error: false,
     messageError: null,
-    language: "eng"
+    language: 'eng',
 };
 
 export const appReducer = (state, action) => {
 
     switch (action.type) {
 
-        case "GET_USER_ROLE_ACTION":
+        case 'GET_USER_ROLE_ACTION':
             return {
                 ...state,
-                userRole: action.payload
+                userRole: action.payload,
             };
-        case "ON_TOGGLE_LANGUAGE_ACTION":
+        case 'ON_TOGGLE_LANGUAGE_ACTION':
             return {
                 ...state,
-                language: action.payload
+                language: action.payload,
             };
         default:
             return state;

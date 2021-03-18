@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Redirect, Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import Spinner from "../spinner";
+import React, { useEffect, useState } from 'react';
+import { Redirect, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+// import Spinner from "../spinner";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
@@ -19,9 +19,10 @@ import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import CollectionsIcon from '@material-ui/icons/Collections';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
+import FormatPaintIcon from '@material-ui/icons/FormatPaint';
+// import Switch from '@material-ui/core/Switch';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Drawer from '@material-ui/core/Drawer';
@@ -29,21 +30,21 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import InboxIcon from '@material-ui/icons/MoveToInbox';
+// import MailIcon from '@material-ui/icons/Mail';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import routes from "../../configs/routes";
-import ErrorIndicator from "../error-indicator";
-import { logoutAction } from "../auth/redux/authActions";
-import { onToggleLanguageAction } from "../app/redux/appActions";
-import { eng } from "./translate/eng";
-import { rus } from "./translate/rus";
-import { ukr } from "./translate/ukr";
-import { translator } from "../../translator/translator";
-import {activeAlertIndicatorAction} from "../alert-indicator/redux/alertIndicatorActions";
-import { renderLanguageIcons } from "../../translator/example";
+// import routes from "../../configs/routes";
+import ErrorIndicator from '../error-indicator';
+import { logoutAction } from '../auth/redux/authActions';
+// import { onToggleLanguageAction } from "../app/redux/appActions";
+import { eng } from './translate/eng';
+import { rus } from './translate/rus';
+import { ukr } from './translate/ukr';
+// import { translator } from "../../translator/translator";
+import { activeAlertIndicatorAction } from '../alert-indicator/redux/alertIndicatorActions';
+import { renderLanguageIcons } from '../../translator/example';
 
 const drawerWidth = 240;
 
@@ -51,7 +52,7 @@ const styles = (theme) => ({
     root: {
         flexGrow: 1,
         flexShrink: 1,
-        display: "flex",
+        display: 'flex',
         fontFamily: 'El Missiri',
     },
     grow: {
@@ -106,11 +107,11 @@ const styles = (theme) => ({
         fontFamily: 'El Missiri',
     },
     navBar: {
-        display: "flex",
+        display: 'flex',
         flexShrink: 1,
-        width: "100%",
-        justifyContent: "space-between",
-        alignItems: "center",
+        width: '100%',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     elMissiri: {
         fontFamily: 'El Missiri',
@@ -155,6 +156,11 @@ const Home = ({ classes, theme }) => {
             icon: <CollectionsIcon />,
             path: '/collection',
         },
+        {
+            desc: 'Meme generator',
+            icon: <FormatPaintIcon />,
+            path: '/meme-gen',
+        },
     ];
 
     const handleMenu = (event) => {
@@ -175,16 +181,16 @@ const Home = ({ classes, theme }) => {
         setOpenDrawer(false);
     };
 
-    const testAlertMessage = "Alert Indicator is work! dfhdhhe dfhdffheheht dfdhethet bcvbcvcv fgererhdfdfb";
+    const testAlertMessage = 'Alert Indicator is work! dfhdhhe dfhdffheheht dfdhethet bcvbcvcv fgererhdfdfb';
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);
@@ -199,7 +205,7 @@ const Home = ({ classes, theme }) => {
 
     return (
         <div>
-            <div className={classes.root}>
+            <div className={`${classes.root}`}>
                 <Drawer
                     variant="permanent"
                     className={classNames(classes.drawer, {
@@ -339,4 +345,3 @@ Home.propTypes = {
 };
 
 export default withStyles(styles, { withTheme: true })(Home);
-

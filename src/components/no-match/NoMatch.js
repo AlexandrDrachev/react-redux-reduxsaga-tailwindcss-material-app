@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -8,12 +8,12 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { eng } from "./translate/eng";
-import { rus } from "./translate/rus";
-import { ukr } from "./translate/ukr";
-import { translator } from "../../translator/translator";
+import { eng } from './translate/eng';
+import { rus } from './translate/rus';
+import { ukr } from './translate/ukr';
+// import { translator } from "../../translator/translator";
 
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, Link } from 'react-router-dom';
 
 const NoMatch = () => {
 
@@ -22,13 +22,13 @@ const NoMatch = () => {
     const [ l, setL ] = useState({});
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);

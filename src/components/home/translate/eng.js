@@ -1,12 +1,12 @@
 export const eng = {
     // A: "=====>",
-    adminPanelMenuItem: "Admin panel",
+    adminPanelMenuItem: 'Admin panel',
 
     // B: "=====>",
     // bFirstLetter: "B first letter",
 
     // C: "=====>",
-    collection: "Collection",
+    collection: 'Collection',
 
     // D: "=====>",
     // dFirstLetter: "D first letter",
@@ -21,8 +21,8 @@ export const eng = {
     // gFirstLetter: "G first letter",
 
     // H: "=====>",
-    homeNaviItemsDesc: "Home",
-    home: "Home",
+    homeNaviItemsDesc: 'Home',
+    home: 'Home',
 
     // I: "=====>",
     // iFirstLetter: "I first letter",
@@ -34,7 +34,7 @@ export const eng = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    logoutMenuItem: "Logout",
+    logoutMenuItem: 'Logout',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -46,7 +46,7 @@ export const eng = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    profileNaviItemsDesc: "Profile",
+    profileNaviItemsDesc: 'Profile',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
@@ -55,10 +55,10 @@ export const eng = {
     // rFirstLetter: "R first letter",
 
     // S: "=====>",
-    settingsMenuItem: "Settings",
+    settingsMenuItem: 'Settings',
 
     // T: "=====>",
-    testAlertIndicatorButton: "TEST ALERT INDICATOR",
+    testAlertIndicatorButton: 'TEST ALERT INDICATOR',
 
     // U: "=====>",
     // uFirstLetter: "U first letter",
@@ -67,7 +67,7 @@ export const eng = {
     // vFirstLetter: "V first letter",
 
     // W: "=====>",
-    worksNaviItemsDesc: "Works",
+    worksNaviItemsDesc: 'Works',
 
     // X: "=====>",
     // xFirstLetter: "X first letter",

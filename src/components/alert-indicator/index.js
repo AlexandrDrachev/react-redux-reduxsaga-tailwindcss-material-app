@@ -1,3 +1,3 @@
-import AlertIndicator from "./AlertIndicator";
+import AlertIndicator from './AlertIndicator';
 
 export default AlertIndicator;

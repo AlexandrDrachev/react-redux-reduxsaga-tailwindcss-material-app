@@ -9,7 +9,7 @@ export const eng = {
     // cFirstLetter: "C first letter",
 
     // D: "=====>",
-    dontHaveAnAccount: "Don't have an account?",
+    dontHaveAnAccount: 'Don\'t have an account?',
 
     // E: "=====>",
     // exampleString: "Example string",
@@ -33,9 +33,9 @@ export const eng = {
     // kFirstLetter: "K first letter",
 
     // L: "=====>",
-    loginToYourAccount: "LOGIN TO YOUR ACCOUNT",
-    loginPlaceholder: "Login",
-    loginButton: "LOGIN",
+    loginToYourAccount: 'LOGIN TO YOUR ACCOUNT',
+    loginPlaceholder: 'Login',
+    loginButton: 'LOGIN',
 
     // M: "=====>",
     // mFirstLetter: "M first letter",
@@ -47,13 +47,13 @@ export const eng = {
     // oFirstLetter: "O first letter",
 
     // P: "=====>",
-    passwordPlaceholder: "Password",
+    passwordPlaceholder: 'Password',
 
     // Q: "=====>",
     // qFirstLetter: "Q first letter",
 
     // R: "=====>",
-    registrationLink: "Registration",
+    registrationLink: 'Registration',
 
     // S: "=====>",
     // sFirstLetter: "S first letter",

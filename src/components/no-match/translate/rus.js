@@ -9,7 +9,7 @@ export const rus = {
     // cFirstLetter: "C first letter",
 
     // D:
-    desc: "Страница не существует, или вы не можете просматривать её содержимое!",
+    desc: 'Страница не существует, или вы не можете просматривать её содержимое!',
 
     // E:
     // exampleString: "Example string",
@@ -18,7 +18,7 @@ export const rus = {
     // fFirstLetter: "F first letter",
 
     // G:
-    goBackButton: "Назад",
+    goBackButton: 'Назад',
 
     // H:
     // hFirstLetter: "H first letter",
@@ -33,8 +33,8 @@ export const rus = {
     // kFirstLetter: "K first letter",
 
     // L:
-    loginLink: "Логин",
-    label: "Страница не найдена!",
+    loginLink: 'Логин',
+    label: 'Страница не найдена!',
 
     // M:
     // mFirstLetter: "M first letter",

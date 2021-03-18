@@ -1,3 +1,3 @@
-import CustomCollection from "./CustomCollection";
+import CustomCollection from './CustomCollection';
 
 export default CustomCollection;

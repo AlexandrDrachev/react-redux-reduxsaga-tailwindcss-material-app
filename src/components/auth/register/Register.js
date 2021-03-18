@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { Link, Redirect } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link, Redirect } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+// import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -14,16 +14,16 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { getRegisterAction } from "../redux/authActions";
-import { onToggleLanguageAction } from "../../app/redux/appActions";
-import { eng } from "./translate/eng";
-import { rus } from "./translate/rus";
-import { ukr } from "./translate/ukr";
-import { translator } from "../../../translator/translator";
+import { getRegisterAction } from '../redux/authActions';
+import { onToggleLanguageAction } from '../../app/redux/appActions';
+import { eng } from './translate/eng';
+import { rus } from './translate/rus';
+import { ukr } from './translate/ukr';
+import { translator } from '../../../translator/translator';
 
 const styles = () => ({
     card: {
-        boxShadow: '7px 7px 10px 5px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)'
+        boxShadow: '7px 7px 10px 5px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
     },
     button: {
         marginBottom: '20px',
@@ -52,7 +52,7 @@ const styles = () => ({
         marginBottom: '20px',
         marginTop: '20px',
         fontFamily: 'El Missiri',
-    }
+    },
 });
 
 const Register = (props) => {
@@ -63,10 +63,10 @@ const Register = (props) => {
     const { classes } = props;
     const dispatch = useDispatch();
     const [ newUser, setNewUser ] = useState({
-        login: "",
-        email: "",
-        password: "",
-        passwordConfirm: ""
+        login: '',
+        email: '',
+        password: '',
+        passwordConfirm: '',
     });
     const language = useSelector(({ appState }) => appState.language);
     const [ l, setL ] = useState({});
@@ -88,7 +88,7 @@ const Register = (props) => {
     };
 
     const getRegister = () => {
-        dispatch(getRegisterAction(newUser))
+        dispatch(getRegisterAction(newUser));
     };
 
     const renderLanguageIcons = () => {
@@ -107,13 +107,13 @@ const Register = (props) => {
     };
 
     useEffect(() => {
-        if (language === "eng") {
+        if (language === 'eng') {
             setL(eng);
         }
-        if (language === "rus") {
+        if (language === 'rus') {
             setL(rus);
         }
-        if (language === "ukr") {
+        if (language === 'ukr') {
             setL(ukr);
         }
     }, [language]);

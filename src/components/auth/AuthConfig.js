@@ -1,4 +1,4 @@
-import authRoles from "./authRoles";
+import authRoles from './authRoles';
 
 import Auth from './Auth';
 import Login from './login';
@@ -16,15 +16,15 @@ const AuthConfig = {
             role: authRoles.user,
             path: '/auth/login',
             exact: false,
-            component: Login
+            component: Login,
         },
         {
             role: authRoles.user,
             path: '/auth/register',
             exact: false,
-            component: Register
-        }
-    ]
+            component: Register,
+        },
+    ],
 };
 
 export default AuthConfig;

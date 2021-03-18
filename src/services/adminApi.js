@@ -1,4 +1,4 @@
-import { dummyUsers } from "./fake-data/dummyUsers";
+import { dummyUsers } from './fake-data/dummyUsers';
 
 export default class AdminApi {
 

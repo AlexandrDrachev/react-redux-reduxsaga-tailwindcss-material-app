@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 import { Route, Switch } from 'react-router-dom';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 // import ErrorIndicator from "../error-indicator";
 // import Spinner from "../spinner";
 
-import routes from "../../configs/routes";
+import routes from '../../configs/routes';
 // import Login from "../auth/login/Login";
-import AlertIndicator from "../alert-indicator";
+import AlertIndicator from '../alert-indicator';
 
 const App = () => {
 
